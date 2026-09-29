@@ -1,97 +1,44 @@
-// Preloader Handler
-window.addEventListener('load', () => {
-  const preloader = document.getElementById('preloader');
-  setTimeout(() => {
-    preloader.classList.add('loaded');
-  }, 1000);
-});
+// Google Drive Links for Reports
+const reportLinks = {
+  g9: 'https://drive.google.com/file/d/1oZya6UrianhHwpaz97p2ARbL6AdducIE/preview',
+  g10: 'https://drive.google.com/file/d/11lavWog1DA3vGptl4vB7K5GiTzFKcqQs/preview',
+  g11: 'https://drive.google.com/file/d/1kUDYSCrsC_-6n1zZF9QliUA_KntgMexL/preview'
+};
 
-// Scroll Intersection Observer for smooth entrance animations
+// Modal Lightbox Opener
+function openModal(reportKey) {
+  const modal = document.getElementById('reportModal');
+  const iframe = document.getElementById('modalFrame');
+  
+  if (reportLinks[reportKey]) {
+    iframe.src = reportLinks[reportKey];
+    modal.style.display = 'flex';
+  }
+}
+
+// Modal Lightbox Closer
+function closeModal() {
+  const modal = document.getElementById('reportModal');
+  const iframe = document.getElementById('modalFrame');
+  
+  modal.style.display = 'none';
+  iframe.src = '';
+}
+
+// Interactive sound or tilt effects on scrap items
 document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.12
-  };
+  const items = document.querySelectorAll('.scrap-item');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  items.forEach(item => {
+    // Add subtle random rotation variation on load
+    const currentTransform = window.getComputedStyle(item).transform;
+    
+    item.addEventListener('mouseenter', () => {
+      item.style.zIndex = '50';
     });
-  }, observerOptions);
 
-  document.querySelectorAll('.fade').forEach(element => {
-    observer.observe(element);
+    item.addEventListener('mouseleave', () => {
+      item.style.zIndex = '1';
+    });
   });
 });
-
-// Gallery Slider Logic
-let currentSlideIndex = 0;
-
-function updateGallerySlider() {
-  const track = document.getElementById('galleryTrack');
-  if (!track) return;
-  const slides = track.querySelectorAll('.slide');
-  if (slides.length === 0) return;
-  
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  track.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
-}
-
-function nextGallerySlide() {
-  const track = document.getElementById('galleryTrack');
-  if (!track) return;
-  const slides = track.querySelectorAll('.slide');
-  const visibleSlides = window.innerWidth <= 900 ? 1 : 3;
-  const maxIndex = slides.length - visibleSlides;
-
-  if (currentSlideIndex < maxIndex) {
-    currentSlideIndex++;
-  } else {
-    currentSlideIndex = 0;
-  }
-  updateGallerySlider();
-}
-
-function prevGallerySlide() {
-  const track = document.getElementById('galleryTrack');
-  if (!track) return;
-  const slides = track.querySelectorAll('.slide');
-  const visibleSlides = window.innerWidth <= 900 ? 1 : 3;
-  const maxIndex = slides.length - visibleSlides;
-
-  if (currentSlideIndex > 0) {
-    currentSlideIndex--;
-  } else {
-    currentSlideIndex = maxIndex;
-  }
-  updateGallerySlider();
-}
-
-window.addEventListener('resize', updateGallerySlider);
-
-// Modal Popup Handler
-function openPopup(element, event) {
-  if (event) event.stopPropagation();
-  const popup = element.querySelector('.card-popup');
-  const overlay = document.getElementById('popupOverlay');
-  
-  if (popup && overlay) {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-    
-    const closePopup = function() {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-      overlay.removeEventListener('click', closePopup);
-      popup.removeEventListener('click', closePopup);
-    };
-    
-    setTimeout(() => {
-      overlay.addEventListener('click', closePopup);
-      popup.addEventListener('click', closePopup);
-    }, 10);
-  }
-}
