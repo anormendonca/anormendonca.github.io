@@ -11,7 +11,8 @@
   --ink-black: #1a1a1a;
   --pencil-gray: #4a4a4a;
   --red-accent: #e63946;
-  --blue-accent: #2a9d8f;
+  --blue-accent: #1d3557;
+  --green-accent: #2a9d8f;
 
   --font-typewriter: 'Special Elite', monospace;
   --font-hand: 'Caveat', cursive;
@@ -27,7 +28,6 @@
 
 body {
   background-color: var(--bg-dark);
-  /* Dot grid background texture like a cutting mat/sketchbook */
   background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 20px 20px;
   color: var(--ink-black);
@@ -58,7 +58,7 @@ body {
 .header-title {
   color: #fff;
   font-family: var(--font-typewriter);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .header-title span {
@@ -67,22 +67,22 @@ body {
 
 .desk-nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .desk-nav a {
   color: #aaa;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-family: var(--font-sans);
+  font-size: 0.85rem;
   transition: color 0.3s;
 }
 
-.desk-nav a:hover, .desk-nav .nav-ext {
+.desk-nav a:hover {
   color: var(--paper-yellow);
 }
 
-/* Canvas Collage Layout */
+/* Canvas Layout */
 .scrapbook-canvas {
   max-width: 1200px;
   margin: 2rem auto;
@@ -93,18 +93,16 @@ body {
   position: relative;
 }
 
-/* Common Scrapbook Item Styles */
 .scrap-item {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scrap-item:hover {
-  transform: scale(1.02) rotate(0deg) !important;
+  transform: scale(1.01) rotate(0deg) !important;
   z-index: 50 !important;
 }
 
-/* Tape Effect */
 .tape-strip {
   position: absolute;
   background: var(--tape-color);
@@ -127,7 +125,7 @@ body {
   transform: rotate(25deg);
 }
 
-/* 1. ID Card Profile */
+/* Profile Card */
 .id-card-wrapper {
   grid-column: span 5;
   transform: rotate(-2deg);
@@ -142,7 +140,6 @@ body {
   top: -15px;
   left: 30px;
   z-index: 15;
-  background: transparent;
 }
 
 .id-card {
@@ -150,28 +147,27 @@ body {
   padding: 1.5rem;
   border-radius: 4px;
   box-shadow: 5px 8px 15px rgba(0,0,0,0.4);
-  display: flex;
-  gap: 1rem;
 }
 
 .id-photo-frame {
-  width: 110px;
-  height: 130px;
+  width: 100px;
+  height: 90px;
   background: #fff;
-  padding: 6px;
+  padding: 5px;
+  margin-bottom: 0.8rem;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
 .id-photo {
   width: 100%;
   height: 100%;
-  background: #333;
+  background: var(--blue-accent);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   font-family: var(--font-marker);
-  font-size: 2rem;
+  font-size: 1.1rem;
 }
 
 .id-details h2 {
@@ -180,7 +176,6 @@ body {
 }
 
 .id-role {
-  font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--pencil-gray);
   margin-bottom: 0.5rem;
@@ -188,8 +183,7 @@ body {
 
 .id-tags {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.3rem;
   margin-bottom: 0.8rem;
 }
 
@@ -201,10 +195,14 @@ body {
   font-family: var(--font-typewriter);
 }
 
-.id-contact {
-  font-size: 0.75rem;
+.id-languages {
+  font-size: 0.78rem;
   color: var(--pencil-gray);
-  line-height: 1.4;
+}
+
+.id-languages ul {
+  padding-left: 1.2rem;
+  margin-top: 0.2rem;
 }
 
 .red-arrow-annotation {
@@ -218,17 +216,17 @@ body {
   transform: rotate(12deg);
 }
 
-/* 2. Smartwatch Card */
+/* Smartwatch Card */
 .smartwatch-card {
-  grid-column: span 4;
-  transform: rotate(1.5deg);
+  grid-column: span 7;
+  transform: rotate(1deg);
 }
 
 .watch-bezel {
   background: #2b2c30;
   border: 4px solid #444;
-  border-radius: 28px;
-  padding: 1rem;
+  border-radius: 24px;
+  padding: 1.2rem;
   box-shadow: 6px 10px 20px rgba(0,0,0,0.5);
   position: relative;
 }
@@ -247,7 +245,7 @@ body {
 .watch-screen {
   background: #000;
   color: #fff;
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 1.2rem;
 }
 
@@ -257,7 +255,6 @@ body {
   font-size: 0.75rem;
   color: #888;
   margin-bottom: 0.8rem;
-  font-family: var(--font-sans);
 }
 
 .watch-title {
@@ -266,34 +263,27 @@ body {
 }
 
 .watch-body {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   line-height: 1.5;
   color: #ddd;
 }
 
-/* 3. The Experience Shop (Receipt) */
+/* Experience Receipt */
 .receipt-card {
-  grid-column: span 3;
-  grid-row: span 2;
+  grid-column: span 6;
   background: var(--paper-receipt);
-  padding: 1.8rem 1.2rem;
+  padding: 1.8rem 1.4rem;
   box-shadow: 4px 8px 20px rgba(0,0,0,0.4);
-  transform: rotate(1deg);
-  /* Jagged receipt bottom edge */
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 95% 100%, 90% calc(100% - 12px), 85% 100%, 80% calc(100% - 12px), 75% 100%, 70% calc(100% - 12px), 65% 100%, 60% calc(100% - 12px), 55% 100%, 50% calc(100% - 12px), 45% 100%, 40% calc(100% - 12px), 35% 100%, 30% calc(100% - 12px), 25% 100%, 20% calc(100% - 12px), 15% 100%, 10% calc(100% - 12px), 5% 100%, 0 calc(100% - 12px));
+  transform: rotate(-1deg);
   font-family: var(--font-typewriter);
 }
 
-.receipt-sub {
-  text-align: center;
-  font-size: 0.9rem;
-}
-
+.receipt-sub { text-align: center; font-size: 0.85rem; }
 .receipt-title {
   text-align: center;
   font-size: 1.5rem;
   text-transform: lowercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   border-bottom: 1px dashed #888;
   padding-bottom: 0.5rem;
 }
@@ -310,74 +300,29 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .receipt-list li {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.item-info {
-  display: flex;
   flex-direction: column;
-  max-width: 65%;
+  gap: 0.3rem;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 0.8rem;
 }
 
-.item-name {
-  font-size: 0.85rem;
-}
+.item-name { font-size: 0.95rem; color: #000; }
+.item-meta { font-size: 0.75rem; color: #555; }
+.item-desc { font-family: var(--font-sans); font-size: 0.8rem; color: #333; margin-top: 0.2rem; }
+.item-date { font-size: 0.75rem; font-weight: bold; color: var(--red-accent); }
 
-.item-meta {
-  font-size: 0.68rem;
-  color: #666;
-}
-
-.item-dots {
-  flex-grow: 1;
-  border-bottom: 1px dotted #999;
-  margin: 0 4px;
-}
-
-.item-date {
-  font-size: 0.75rem;
-}
-
-.receipt-footer {
-  margin-top: 2rem;
-  border-top: 1px dashed #888;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.imdb-badge {
-  display: flex;
-  flex-direction: column;
-  background: #000;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-}
-
-.qr-placeholder {
-  border: 1px solid #000;
-  padding: 6px;
-  font-size: 0.55rem;
-  text-align: center;
-  background: #fff;
-}
-
-/* 4. Education Torn Note */
+/* Education Note */
 .torn-note-card {
-  grid-column: span 5;
+  grid-column: span 6;
   background: var(--paper-white);
-  padding: 1.5rem 1.8rem 1.5rem 3rem;
+  padding: 1.8rem 1.8rem 1.8rem 3rem;
   box-shadow: 4px 6px 15px rgba(0,0,0,0.3);
-  transform: rotate(-1deg);
+  transform: rotate(1deg);
   border-left: 3px solid var(--red-accent);
 }
 
@@ -393,167 +338,142 @@ body {
 
 .handwritten-heading {
   font-family: var(--font-typewriter);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-transform: lowercase;
 }
 
-.edu-block {
-  margin-bottom: 1rem;
+.edu-level { font-size: 0.95rem; font-weight: bold; color: var(--blue-accent); }
+.edu-school { font-size: 0.85rem; margin-top: 0.2rem; }
+.edu-detail { font-size: 0.8rem; color: #666; }
+
+.results-box {
+  background: var(--paper-cream);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
 }
 
-.edu-level {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  color: var(--blue-accent);
+.results-title { font-size: 0.85rem; display: block; margin-bottom: 0.5rem; }
+.scores-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  list-style: none;
 }
 
-.edu-school {
-  font-size: 0.85rem;
-  font-weight: bold;
-}
+.activities-tag { font-size: 0.8rem; color: var(--pencil-gray); }
 
-.edu-detail {
-  font-size: 0.8rem;
-  color: var(--pencil-gray);
-}
-
-.report-buttons {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.report-buttons button {
-  background: #eee;
-  border: 1px solid #ccc;
-  padding: 4px 8px;
-  font-size: 0.75rem;
-  cursor: pointer;
-  border-radius: 3px;
-  font-family: var(--font-sans);
-  transition: background 0.2s;
-}
-
-.report-buttons button:hover {
-  background: var(--paper-yellow);
-}
-
-/* 5. Abilities Notepad */
-.abilities-card {
-  grid-column: span 4;
-  transform: rotate(2deg);
+/* Projects Card */
+.projects-card {
+  grid-column: span 12;
+  background: var(--paper-cream);
+  padding: 1.8rem;
+  box-shadow: 4px 8px 18px rgba(0,0,0,0.4);
+  transform: rotate(-0.5deg);
 }
 
 .wooden-tag {
-  background: #b5838d;
+  background: #c8963e;
   color: #fff;
-  padding: 4px 12px;
+  padding: 4px 14px;
   font-family: var(--font-marker);
   display: inline-block;
-  transform: rotate(-3deg);
-  margin-bottom: -8px;
-  z-index: 5;
-  position: relative;
-}
-
-.lined-paper {
-  background: var(--paper-cream);
-  padding: 1.2rem;
-  background-image: repeating-linear-gradient(var(--paper-cream) 0px, var(--paper-cream) 23px, #91aec4 24px);
-  box-shadow: 3px 5px 12px rgba(0,0,0,0.3);
-  font-family: var(--font-hand);
-  font-size: 1.3rem;
-}
-
-.lined-paper ul {
-  list-style: none;
-  padding-left: 0.5rem;
-}
-
-.lined-paper li {
-  line-height: 24px;
-}
-
-.doodle-star {
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-  font-size: 2rem;
-  color: var(--red-accent);
-}
-
-/* 6. Software Grid Badge */
-.software-card {
-  grid-column: span 4;
-  background: #222;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
   transform: rotate(-2deg);
-  box-shadow: 3px 5px 12px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.project-entry {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--green-accent);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-entry h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--blue-accent);
+}
+
+.project-entry p {
+  font-size: 0.8rem;
+  color: #444;
+  line-height: 1.4;
+  margin-top: 0.3rem;
+}
+
+/* Software / Certs */
+.software-card {
+  grid-column: span 6;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transform: rotate(1deg);
 }
 
 .sd-card-badge {
   font-family: var(--font-typewriter);
-  font-size: 0.75rem;
-  color: #aaa;
-  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--paper-yellow);
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
-.badge-grid {
+.certs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
-.app-tile {
-  background: #333;
-  padding: 0.6rem;
-  text-align: center;
-  font-size: 0.75rem;
-  border-radius: 4px;
+.cert-tile {
+  background: #2a2a2a;
+  padding: 0.8rem;
+  border-radius: 6px;
   border: 1px solid #444;
-  font-weight: bold;
-}
-
-/* 7. Skills Labels */
-.skills-labels {
-  grid-column: span 4;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
-.label-header {
-  font-family: var(--font-marker);
-  color: var(--paper-yellow);
-  font-size: 1.2rem;
-}
+.cert-tile strong { font-size: 0.8rem; color: #fff; }
+.cert-tile span { font-size: 0.7rem; color: #aaa; margin-top: 0.2rem; }
+.cert-tile small { font-size: 0.65rem; color: var(--paper-yellow); margin-top: 0.3rem; }
 
-.tape-label {
+/* Volunteering */
+.volunteering-card {
+  grid-column: span 6;
   background: var(--paper-white);
-  padding: 6px 12px;
-  font-family: var(--font-typewriter);
-  font-size: 0.85rem;
-  box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
-  width: fit-content;
+  padding: 1.5rem;
+  box-shadow: 3px 6px 15px rgba(0,0,0,0.3);
+  transform: rotate(-1deg);
 }
 
-.label-1 { transform: rotate(-2deg); }
-.label-2 { transform: rotate(3deg); margin-left: 10px; }
-.label-3 { transform: rotate(-1deg); }
-.label-4 { transform: rotate(2deg); margin-left: 5px; }
+.card-heading {
+  font-family: var(--font-typewriter);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
 
-/* 8. Post-it Note */
+.vol-entry { margin-bottom: 1rem; }
+.vol-entry h4 { font-size: 0.9rem; color: var(--blue-accent); }
+.vol-entry p { font-size: 0.8rem; color: #444; margin-top: 0.3rem; line-height: 1.4; }
+
+/* Honors Post-it */
 .postit-card {
-  grid-column: span 5;
+  grid-column: span 6;
   background: var(--paper-yellow);
   padding: 1.5rem;
   box-shadow: 5px 8px 15px rgba(0,0,0,0.3);
   transform: rotate(1.5deg);
-  font-family: var(--font-sans);
 }
 
 .pin {
@@ -565,7 +485,6 @@ body {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
 .postit-card h3 {
@@ -575,53 +494,40 @@ body {
 }
 
 .postit-card ul {
-  list-style-type: square;
+  list-style: square;
   padding-left: 1.2rem;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 
-/* Modal Popup */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.85);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
+/* Sports Card */
+.sports-card {
+  grid-column: span 6;
+  background: var(--paper-cream);
+  padding: 1.5rem;
+  box-shadow: 4px 6px 15px rgba(0,0,0,0.3);
+  transform: rotate(-1deg);
 }
 
-.modal-body {
-  width: 80vw;
-  height: 80vh;
-  background: #fff;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+.sports-card h3 {
+  font-family: var(--font-marker);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--red-accent);
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  z-index: 10;
-  font-weight: bold;
+.teams-line { font-size: 0.78rem; color: #444; margin-bottom: 1rem; }
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
 }
 
-.modal-body iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+.sports-col { font-size: 0.75rem; }
+.sports-col ul { padding-left: 1rem; margin-top: 0.4rem; }
+.win-title { color: #d4af37; }
+.runner-title { color: #888; }
+.bronze-title { color: #cd7f32; }
 
 /* Footer */
 .desk-footer {
@@ -632,16 +538,8 @@ body {
   font-family: var(--font-typewriter);
 }
 
-/* Responsive Layout */
 @media (max-width: 900px) {
-  .scrapbook-canvas {
-    grid-template-columns: 1fr;
-  }
-  
-  .id-card-wrapper, .smartwatch-card, .receipt-card, 
-  .torn-note-card, .abilities-card, .software-card, 
-  .skills-labels, .postit-card {
-    grid-column: span 1 !important;
-    transform: rotate(0deg) !important;
-  }
+  .scrapbook-canvas { grid-template-columns: 1fr; }
+  .scrap-item { grid-column: span 1 !important; transform: rotate(0deg) !important; }
+  .sports-grid { grid-template-columns: 1fr; }
 }
