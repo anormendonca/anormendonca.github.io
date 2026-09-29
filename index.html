@@ -3,509 +3,239 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anor Teran Mendonca | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Anor Teran Mendonca | Scrapbook Portfolio</title>
+  
+  <!-- Fonts for Scrapbook Aesthetics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Permanent+Marker&family=Special+Elite&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-<!-- Aesthetic Preloader -->
-<div id="preloader">
-  <div class="loader-content">
-    <div class="loader-logo">A<span>M</span></div>
-    <div class="loader-bar-bg">
-      <div class="loader-bar"></div>
-    </div>
-    <div class="loader-text">Loading Portfolio</div>
-  </div>
-</div>
+  <!-- Header Banner / Navigation -->
+  <header class="desk-header">
+    <div class="header-tape">MEMO BOARD</div>
+    <div class="header-title">portfolio<span>.raw</span></div>
+    <nav class="desk-nav">
+      <a href="#id-card">Profile</a>
+      <a href="#experience-receipt">Experience</a>
+      <a href="#education-notepad">Education</a>
+      <a href="#skills-tape">Abilities</a>
+      <a href="#honors-scrap">Honors</a>
+      <a href="https://anormendonca.github.io/website/productivity.html" target="_blank" class="nav-ext">Productivity ↗</a>
+    </nav>
+  </header>
 
-<nav>
-  <span class="nav-logo" id="amLogo">AM</span>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#honors">Honors</a></li>
-    <li><a href="https://anormendonca.github.io/website/productivity.html" target="_blank">Productivity</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Main Scrapbook Canvas -->
+  <main class="scrapbook-canvas">
 
-<!-- Hero Section -->
-<div class="hero">
-  <div class="hero-line"></div>
-  <div class="hero-num">A</div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Dubai, UAE / Udupi, India &nbsp;·&nbsp; Aspiring Medic</div>
-    <h1>Anor Teran<br>Mendonca<span class="dim">.</span></h1>
-    <p class="hero-desc">Year 11 Medical Aspirant | SaintZ ’26 | Student at UJS | Tech & Music Enthusiast</p>
-    <div class="hero-btns">
-      <a class="btn-primary" href="#contact">Get in touch</a>
-      <a class="btn-ghost" href="#about">Learn more ↓</a>
-    </div>
-  </div>
-  <div class="hero-scroll">Scroll</div>
-</div>
-
-<!-- About Section -->
-<div class="section fade" id="about">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">01</span><h2 class="section-title">About me</h2></div>
-    <div class="about-grid">
-      <p class="about-text">Year 11 medical aspirant with a strong scientific foundation aiming for a career in medicine. Combines rigorous academic training with leadership and communication through MUN, Toastmasters, and the Sandesha Foundation. Pianist, violinist, basketballer, youth organization creative designer, and self-directed technical builder—bringing analytical rigor, discipline, and multi-disciplinary problem-solving to future medical studies.</p>
-      <div class="about-facts">
-        <div class="fact-row"><span class="fact-label">School</span><span class="fact-value">Jnanasudha PU College, Udupi</span></div>
-        <div class="fact-row"><span class="fact-label">Based in</span><span class="fact-value">Dubai, UAE / Udupi, India</span></div>
-        <div class="fact-row"><span class="fact-label">Background</span><span class="fact-value">Indian · Roman Catholic</span></div>
-        <div class="fact-row"><span class="fact-label">Languages</span><span class="fact-value">English (Native/Bilingual)<br>Konkani (Native/Bilingual)<br>Hindi (Professional)<br>Kannada (Working)</span></div>
-        <div class="fact-row"><span class="fact-label">Education</span><span class="fact-value">Edexcel GCSE/IGCSE (5A*, 2A, 1B)<br>KSEAB PUC (PCMB + ES)</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Education Section -->
-<div class="section fade" id="education">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Education</h2></div>
-    
-    <div class="exp-list">
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Pre-University Course (PUC), PCMB + ES</div>
-          <div class="exp-org">Jnanasudha PU College, Udupi</div>
-          <p class="exp-desc">Pursuing Karnataka Board (KSEAB) PUC in Physics, Chemistry, Mathematics, Biology, English, and Sanskrit. Focused on NEET-UG medical entrance preparation; building analytical, scientific, and problem-solving skills through intensive academic training.</p>
+    <!-- 1. ID / Profile Card (Top Left) -->
+    <section class="scrap-item id-card-wrapper" id="id-card">
+      <div class="paper-clip"></div>
+      <div class="id-card">
+        <div class="id-photo-frame">
+          <div class="id-photo">
+            <span class="photo-placeholder">AM</span>
+          </div>
         </div>
-        <div class="exp-date">May 2026 – Present</div>
+        <div class="id-details">
+          <h2>Anor Teran Mendonca</h2>
+          <p class="id-role">Medical Aspirant & Tech Builder</p>
+          <div class="id-tags">
+            <span class="id-tag">LOC.DUBAI / UDUPI</span>
+            <span class="id-tag">YEAR 11 · SAINTZ '26</span>
+          </div>
+          <div class="id-contact">
+            <div>📞 +971 589101067</div>
+            <div>✉️ anort.mendonca@gmail.com</div>
+            <div>🔗 linkedin.com/in/anormendonca</div>
+          </div>
+        </div>
+      </div>
+      <div class="red-arrow-annotation">my portfolio ↗</div>
+    </section>
+
+    <!-- 2. Smartwatch Frame (About Me) -->
+    <section class="scrap-item smartwatch-card">
+      <div class="watch-bezel">
+        <div class="watch-screen">
+          <div class="watch-header">
+            <span class="watch-title">about me</span>
+            <span class="watch-time">12:15</span>
+          </div>
+          <p class="watch-body">
+            Year 11 medical aspirant with a strong scientific foundation aiming for a career in medicine. Combines academic training with leadership through MUN, Toastmasters, and Sandesha Foundation. Pianist, violinist, basketballer, youth designer, and self-directed builder bringing analytical rigor to future medical studies.
+          </p>
+        </div>
+        <div class="watch-crown"></div>
+      </div>
+    </section>
+
+    <!-- 3. The Experience Shop (Receipt Style List) -->
+    <section class="scrap-item receipt-card" id="experience-receipt">
+      <div class="tape-strip top-tape"></div>
+      <div class="receipt-header">
+        <div class="receipt-sub">the</div>
+        <h2 class="receipt-title">experience shop</h2>
       </div>
       
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">High School Diploma, Edexcel GCSEs/IGCSEs (Higher Tier)</div>
-          <div class="exp-org">St. Mary's Catholic High School, Dubai</div>
-          <p class="exp-desc"><strong>Grade:</strong> Year 1 to Year 11 (Score: 5A*, 2A, 1B)<br>
-          International GCSEs (Higher Tier): Biology (9), Chemistry (9), Physics (9), Maths (9), Religious Studies - Christianity (9), Psychology (7), Computer Science (7), English Language (6), Spoken English (Distinction).<br>
-          <em>*Transitioned from standard GCSEs due to war.</em><br>
-          Active in Science Clubs, Public Speaking, Basketball & Track, and Musical Instruments (Violin & Piano).</p>
-          
-          <div class="report-links-row">
-            <div class="text-popup-wrapper" onclick="openPopup(this, event)">
-              <div class="text-popup-btn">📄 Grade 9 Report</div>
-              <div class="card-popup">
-                <iframe src="https://drive.google.com/file/d/1oZya6UrianhHwpaz97p2ARbL6AdducIE/preview" title="Grade 9 Report" allow="autoplay"></iframe>
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-
-            <div class="text-popup-wrapper" onclick="openPopup(this, event)">
-              <div class="text-popup-btn">📄 Grade 10 Report</div>
-              <div class="card-popup">
-                <iframe src="https://drive.google.com/file/d/11lavWog1DA3vGptl4vB7K5GiTzFKcqQs/preview" title="Grade 10 Report" allow="autoplay"></iframe>
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-
-            <div class="text-popup-wrapper" onclick="openPopup(this, event)">
-              <div class="text-popup-btn">📄 Grade 11 Report</div>
-              <div class="card-popup">
-                <iframe src="https://drive.google.com/file/d/1kUDYSCrsC_-6n1zZF9QliUA_KntgMexL/preview" title="Grade 11 Report" allow="autoplay"></iframe>
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="exp-date">2015 – 2026</div>
+      <div class="receipt-table-head">
+        <span>items</span>
+        <span>date</span>
       </div>
+
+      <ul class="receipt-list">
+        <li>
+          <div class="item-info">
+            <strong class="item-name">Music Teacher</strong>
+            <span class="item-meta">freelance · piano/violin/theory</span>
+          </div>
+          <span class="item-dots"></span>
+          <span class="item-date">2024–2026</span>
+        </li>
+
+        <li>
+          <div class="item-info">
+            <strong class="item-name">Graphic Designer</strong>
+            <span class="item-meta">jesus youth international</span>
+          </div>
+          <span class="item-dots"></span>
+          <span class="item-date">2025–2026</span>
+        </li>
+
+        <li>
+          <div class="item-info">
+            <strong class="item-name">Web Developer</strong>
+            <span class="item-meta">custom study tools & sites</span>
+          </div>
+          <span class="item-dots"></span>
+          <span class="item-date">2020–2026</span>
+        </li>
+
+        <li class="highlight-item">
+          <div class="item-info">
+            <strong class="item-name">Toner Collection Drive</strong>
+            <span class="item-meta">500+ recycled units</span>
+          </div>
+          <span class="item-dots"></span>
+          <span class="item-date">2020–2026</span>
+        </li>
+
+        <li>
+          <div class="item-info">
+            <strong class="item-name">Minecraft Infrastructure</strong>
+            <span class="item-meta">server admin & community</span>
+          </div>
+          <span class="item-dots"></span>
+          <span class="item-date">2020–2023</span>
+        </li>
+      </ul>
+
+      <div class="receipt-footer">
+        <div class="imdb-badge">
+          <strong>IGCSE SCORE</strong>
+          <span>5A* · 2A · 1B</span>
+        </div>
+        <div class="qr-code-box">
+          <div class="qr-placeholder">
+            <span>SCAN FOR<br>FULL CV</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Education Note (Torn Notebook Paper) -->
+    <section class="scrap-item torn-note-card" id="education-notepad">
+      <div class="notebook-holes"></div>
+      <div class="tape-strip corner-tape"></div>
       
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Trinity College London Examinations</div>
-          <div class="exp-org">Music Performance & Theory</div>
-          <p class="exp-desc">Achieved Grades in Piano (G6), Violin (G4), Music Theory (G4), and Keyboard (G3). Currently preparing for advanced grades. Developed technical proficiency, musical discipline, stage confidence, and sight-reading skills. Mentored by the Late Kresitha Gabil Momin.</p>
-        </div>
-        <div class="exp-date">Sep 2015 – Present</div>
-      </div>
-    </div>
+      <h3 class="handwritten-heading">education</h3>
 
-  </div>
-</div>
-
-<!-- Experience Section -->
-<div class="section fade" id="experience">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Experience</h2></div>
-    <div class="exp-list">
-      
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Music Teacher</div>
-          <div class="exp-org">Freelance · Freelance · Dubai, UAE / Hybrid</div>
-          <p class="exp-desc">Deliver 1-on-1 piano, violin, keyboard, and music theory lessons for beginner and intermediate students.<br>
-          • <strong>Examination Prep:</strong> Guide learners through Trinity College London syllabus, sight-reading, technique, and theory requirements.<br>
-          • <strong>Mentorship:</strong> Tailor lessons to individual learning styles to build performance confidence and musical expression.</p>
-          <div class="skill-tags"><span class="tag">Music Theory</span><span class="tag">Instrument Instruction</span><span class="tag">Trinity Syllabus</span></div>
-        </div>
-        <div class="exp-date">Jan 2024 – Present (2 yrs 9 mos)</div>
+      <div class="edu-block">
+        <h4 class="edu-level">pre-university (puc)</h4>
+        <p class="edu-school">Jnanasudha PU College, Udupi (2026–Present)</p>
+        <p class="edu-detail">PCMB + ES · NEET-UG Preparation</p>
       </div>
 
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Graphic Designer</div>
-          <div class="exp-org">Jesus Youth International · Part-time · Dubai, UAE / Remote</div>
-          <p class="exp-desc">Designed posters, event branding, digital media, and social content for youth programmes. Coordinated with team leaders to deliver high-quality visuals on short deadlines. Gained hands-on experience in layout hierarchy, color strategy, and audience-focused design.</p>
-          <div class="skill-tags"><span class="tag">Graphic Design</span><span class="tag">Event Branding</span><span class="tag">Digital Media</span></div>
-        </div>
-        <div class="exp-date">Sep 2025 – May 2026 (9 mos)</div>
+      <div class="edu-block">
+        <h4 class="edu-level">highschool / igcses</h4>
+        <p class="edu-school">St. Mary's Catholic High School, Dubai (2015–2026)</p>
+        <p class="edu-detail">Biology (9), Chemistry (9), Physics (9), Maths (9), Religious Studies (9), Psychology (7), Computer Science (7), English (6)</p>
       </div>
 
-    </div>
-  </div>
-</div>
-
-<!-- Licenses & Certifications Section -->
-<div class="section fade" id="certifications">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Licenses & Certifications</h2></div>
-    <div class="cert-grid">
-      
-      <div class="cert-card">
-        <h4>Toastmasters Youth Leadership Program</h4>
-        <div class="cert-org">District 127 Toastmasters</div>
-        <div class="cert-date">Issued Jun 2026</div>
-        <p>Developed public speaking, impromptu speech delivery, peer evaluation, and parliamentary procedure leadership skills.</p>
-        <span class="tag">Public Speaking</span>
+      <div class="report-buttons">
+        <button onclick="openModal('g9')">📄 G9 Report</button>
+        <button onclick="openModal('g10')">📄 G10 Report</button>
+        <button onclick="openModal('g11')">📄 G11 Report</button>
       </div>
+    </section>
 
-      <div class="cert-card">
-        <h4>Graded Music Examinations - Piano Grade 6</h4>
-        <div class="cert-org">Trinity College London</div>
-        <div class="cert-date">Issued Jan 2025</div>
-        <p>Demonstrated upper-intermediate piano performance techniques, repertoire execution, sight-reading, and music theory.</p>
-        <span class="tag">Music Performance</span>
+    <!-- 5. Technical Abilities Notepad -->
+    <section class="scrap-item abilities-card" id="skills-tape">
+      <div class="wooden-tag">abilities</div>
+      <div class="lined-paper">
+        <ul>
+          <li>Piano (Trinity Grade 6)</li>
+          <li>Violin (Trinity Grade 4)</li>
+          <li>Public Speaking & MUN</li>
+          <li>UI/UX & Graphic Design</li>
+          <li>Competitive Basketball</li>
+          <li>Web Systems & Server Admin</li>
+        </ul>
+        <div class="doodle-star">★</div>
       </div>
+    </section>
 
-      <div class="cert-card">
-        <h4>Graded Music Examinations - Violin Grade 4</h4>
-        <div class="cert-org">Trinity College London</div>
-        <div class="cert-date">Issued Jan 2025</div>
-        <p>Mastered intermediate violin bowing technique, intonation, scales, and expressive classical performance.</p>
-        <span class="tag">Music Performance</span>
+    <!-- 6. Software & Certifications Badges -->
+    <section class="scrap-item software-card">
+      <div class="sd-card-badge">
+        <span>software & certs</span>
       </div>
-
-      <div class="cert-card">
-        <h4>Graded Music Examinations - Theory Grade 4</h4>
-        <div class="cert-org">Trinity College London</div>
-        <p>Comprehensive knowledge of tonal harmony, melodic composition, rhythm notation, and musical analysis.</p>
-        <span class="tag">Music Theory</span>
+      <div class="badge-grid">
+        <div class="app-tile">Toastmasters</div>
+        <div class="app-tile">Trinity London</div>
+        <div class="app-tile">Adnoc STEM</div>
+        <div class="app-tile">HTML/CSS/JS</div>
       </div>
+    </section>
 
-      <div class="cert-card">
-        <h4>Graded Music Examinations - Keyboard Grade 3</h4>
-        <div class="cert-org">Trinity College London</div>
-        <p>Practical proficiency in electronic keyboard performance, harmonization, and registration management.</p>
-        <span class="tag">Music Performance</span>
-      </div>
+    <!-- 7. Soft Skills Taped Labels -->
+    <section class="scrap-item skills-labels">
+      <div class="label-header">skills</div>
+      <div class="tape-label label-1">adaptability</div>
+      <div class="tape-label label-2">communication</div>
+      <div class="tape-label label-3">collaboration</div>
+      <div class="tape-label label-4">problem-solving</div>
+    </section>
 
+    <!-- 8. Basketball Record & Honors Post-it -->
+    <section class="scrap-item postit-card" id="honors-scrap">
+      <div class="pin"></div>
+      <h3>🏆 Basketball & Awards</h3>
+      <ul>
+        <li><strong>SaintZ / IBL Champion:</strong> 10th & 11th SaintZ, 15th IBL U13, 5th GMA U17</li>
+        <li><strong>SaintZ MUN '25:</strong> Honourable Mention (CSW Delegation)</li>
+        <li><strong>SMMC Award:</strong> Academic Excellence Certificate (2026)</li>
+        <li><strong>Math Olympiad:</strong> UAE Selection Participant</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Modal Lightbox for Drive Reports -->
+  <div class="modal-overlay" id="reportModal" onclick="closeModal()">
+    <div class="modal-body" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕ Close</button>
+      <iframe id="modalFrame" src="" title="Document Preview"></iframe>
     </div>
   </div>
-</div>
 
-<!-- Projects Section -->
-<div class="section fade" id="projects">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">05</span><h2 class="section-title">Projects</h2></div>
-    <div class="proj-grid">
-
-      <div class="proj-card">
-        <h4>Neighborhood Recycling Initiative – Toner Drive</h4>
-        <div class="proj-date">2020 – Present</div>
-        <p><strong>Operations & Impact:</strong> Collected 500+ used printer toners from households, offices, and community spaces to reduce hazardous landfill waste.<br>
-        <strong>Outreach & Skills:</strong> Coordinated logistical pickups and pitched directly to community members, building public engagement, communication, and project management skills.</p>
-      </div>
-
-      <div class="proj-card">
-        <h4>Web Developer & Portfolio Systems</h4>
-        <div class="proj-date">2020 – Present</div>
-        <p><strong>Development & UI/UX:</strong> Designed and built personal/business portfolios, web tools (calculators, clocks), custom digital study planners, and revision trackers with interactive features.<br>
-        <strong>Technical & System Skills:</strong> Applied programming logic, web development, server administration, and workflow optimization to deliver functional digital solutions.</p>
-      </div>
-
-      <div class="proj-card">
-        <h4>GCSE & IGCSE Resource Drive – Curated Study System</h4>
-        <div class="proj-date">2024 – 2026</div>
-        <p>Designed a structured, unified Google Drive resource hub for GCSE/IGCSE core sciences, maths, psychology, English, CS, and RS. Created detailed topic notes, past paper databases, active-recall sheets, blurting templates, study planners, and syllabus checklists optimized for revision.</p>
-      </div>
-
-      <div class="proj-card">
-        <h4>Adnoc STEM & Energy E-Learning Program</h4>
-        <div class="proj-date">2020 – 2023</div>
-        <p>Completed a series of STEM e-learning programs including Formula Ethara at Home 2022, COP28 UAE Challenge, Mission Digital Energy, Energy Camp, Ready Set Data!, EarthDay Zero Waste Kit Challenge, WorldWaterDay Challenge, and Pi Day Challenge.</p>
-      </div>
-
-      <div class="proj-card">
-        <h4>Minecraft Server Hosting & Infrastructure</h4>
-        <div class="proj-date">2020 – 2023</div>
-        <p><strong>Technical Operations:</strong> Hosted, optimized, and maintained multiplayer server infrastructure, managing plugin integration, role-based permissions, automated backups, and real-time troubleshooting.<br>
-        <strong>Community Leadership:</strong> Scaled and moderated a safe, engaged community of 200+ active members and 500+ lifetime players.</p>
-      </div>
-
-      <div class="proj-card">
-        <h4>Mechanical Solar System Model</h4>
-        <div class="proj-date">2022 – 2023</div>
-        <p>Built a functional mechanical model of the solar system using a custom gear assembly to demonstrate planetary motion. Calculated gear ratios to accurately replicate orbital periods as a application of physics and mechanical logic.</p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Honors & Awards Section -->
-<div class="section fade" id="honors">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Honors & Awards</h2></div>
-    
-    <div class="exp-list" style="margin-bottom: 3rem;">
-      
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Certificate of Academic Excellence</div>
-          <div class="exp-org">St. Mary's Catholic Mangalorean Community, Dubai</div>
-          <p class="exp-desc">Awarded in recognition of outstanding academic performance, leadership, and dedication to educational achievement within the St. Mary's Catholic Mangalorean Community.</p>
-        </div>
-        <div class="exp-date">Sep 2026</div>
-      </div>
-
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Honourable Mention – SaintZ Model United Nations</div>
-          <div class="exp-org">SaintZ MUN 2025 · Commission on the Status of Women (CSW)</div>
-          <p class="exp-desc">• <strong>Diplomatic Strategy:</strong> Researched international policy frameworks, represented the French delegation's stance on women's rights, and delivered impromptu speeches during formal debate.<br>
-          • <strong>Resolution Drafting:</strong> Partnered with regional delegates to negotiate policy compromises and sponsor comprehensive committee resolutions.</p>
-        </div>
-        <div class="exp-date">Jun 2025</div>
-      </div>
-
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">UAE Mathematics Olympiad Selection Participant</div>
-          <div class="exp-org">Sparkler Minds Memoriad UAE</div>
-          <p class="exp-desc">Completed Rounds 1 and 2 of the UAE Mathematics Olympiad selection process (did not sit for subsequent rounds due to scheduling conflicts). Tested on high-speed quantitative problem-solving and mathematical logic under timed competition conditions.</p>
-        </div>
-        <div class="exp-date">May 2024</div>
-      </div>
-
-      <div class="exp-row">
-        <div>
-          <div class="exp-title">Competitive Basketball Record & Leadership</div>
-          <div class="exp-org">SaintZ (2020–26), GiantZ (2020–23), Roces (2024–25), & UJS (2026–Present)</div>
-          <p class="exp-desc">Member and Team Captain across competitive youth basketball teams in structured training programmes and league competitions. Strategic leader, captain of U2009 team, and mentor to U2010 players.</p>
-
-          <div class="report-links-row" style="margin-top: 15px;">
-            <div class="text-popup-wrapper" onclick="openPopup(this, event)">
-              <div class="text-popup-btn">🏆 View Detailed Tournament Record & Stats</div>
-              
-              <div class="card-popup" style="padding: 2rem; text-align: left; max-width: 480px; max-height: 80vh; overflow-y: auto; border-radius: 12px;">
-                <h3 style="margin-top: 0; margin-bottom: 1.2rem; font-family: 'Syne', sans-serif; font-size: 1.4rem;">Tournament Record & Highlights</h3>
-                
-                <h4 style="margin-bottom: 0.5rem; font-size: 1rem; color: #64ffda;">🥇 Winners</h4>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.2rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6;">
-                  <li>• 11th SaintZ (2025–2026)</li>
-                  <li>• 9th SaintZ (2023–2024)</li>
-                  <li>• 5th GMA U17 (2023–2024)</li>
-                  <li>• 15th Indian Basketball League U13 (2022) — <em>4 PPG, 5 RPG</em></li>
-                  <li>• 10th GMA (2021–2022)</li>
-                </ul>
-
-                <h4 style="margin-bottom: 0.5rem; font-size: 1rem; color: #64ffda;">🥈 Runners Up</h4>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.2rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6;">
-                  <li>• DPS Sharjah Sundeep Batavia U18 (2023–2024)</li>
-                  <li>• 11th GMA (2022–2023)</li>
-                  <li>• SBAA Boys Div 3A Season 3 (2022)</li>
-                </ul>
-
-                <h4 style="margin-bottom: 0.5rem; font-size: 1rem; color: #64ffda;">🥉 Bronze & Notable Stats</h4>
-                <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.85; line-height: 1.6;">
-                  <li>• 10th SaintZ (2024–2025) — <strong>Bronze</strong> (<em>5 PPG, 5 RPG, 3 APG</em>)</li>
-                  <li>• Jazzville B2009 (2023, 2024) — <strong>Bronze</strong></li>
-                  <li>• 12th GMA U17 (2024–2025) — (<em>10 PPG, 5 RPG, 3 APG</em>)</li>
-                  <li>• Dubai School Games by Dubai Sports Council (2023)</li>
-                  <li>• TMS & DPS Tournaments (2024–2026)</li>
-                </ul>
-                
-                <div class="popup-close-hint" style="position: static; transform: none; text-align: center; margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="exp-date">2020 – Present</div>
-      </div>
-
-    </div>
-
-    <h3 class="carousel-title">Gallery & Media Showcase</h3>
-
-    <div class="slider-wrapper">
-      <button class="slider-arrow" onclick="prevGallerySlide()">&#10094;</button>
-      
-      <div class="slider-viewport">
-        <div class="slider-track" id="galleryTrack">
-          
-          <!-- Slide 1: Basketball Team -->
-          <div class="slide">
-            <div class="achievement-card" onclick="openPopup(this, event)">
-              <div class="achievement-img-wrapper">
-                <img class="main-img" src="photos/basketball.png" alt="School Basketball Team">
-              </div>
-              <p>School Basketball Team</p>
-              <span class="sub">Championship Winners</span>
-              <div class="card-popup">
-                <img src="photos/basketball.png" alt="School Basketball Team Full">
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: Saintz MUN -->
-          <div class="slide">
-            <div class="achievement-card" onclick="openPopup(this, event)">
-              <div class="achievement-img-wrapper">
-                <img class="main-img" src="photos/mun.png" alt="Saintz MUN Honourable Mention">
-              </div>
-              <p>SaintZ MUN 2025</p>
-              <span class="sub">Honourable Mention (CSW)</span>
-              <div class="card-popup">
-                <img src="photos/mun.png" alt="Saintz MUN Honourable Mention Full">
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3: Altar Servers Keyboard / Music -->
-          <div class="slide">
-            <div class="achievement-card" onclick="openPopup(this, event)">
-              <div class="achievement-img-wrapper">
-                <img class="main-img" src="photos/music.png" alt="Music Ensemble Performance">
-              </div>
-              <p>Liturgical Music Ensemble</p>
-              <span class="sub">Keyboard & Violin Accompaniment</span>
-              <div class="card-popup">
-                <img src="photos/music.png" alt="Music Ensemble Performance Full">
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4: Varsity Basketball -->
-          <div class="slide">
-            <div class="achievement-card" onclick="openPopup(this, event)">
-              <div class="achievement-img-wrapper">
-                <img class="main-img" src="photos/varsity.png" alt="Varsity Basketball Action">
-              </div>
-              <p>Varsity Basketball</p>
-              <span class="sub">Competitive League Play</span>
-              <div class="card-popup">
-                <img src="photos/varsity.png" alt="Varsity Basketball Action Full">
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5: Maths Olympiad -->
-          <div class="slide">
-            <div class="achievement-card" onclick="openPopup(this, event)">
-              <div class="achievement-img-wrapper">
-                <img class="main-img" src="photos/maths.png" alt="UAE Mathematics Olympiad">
-              </div>
-              <p>Sparkler Minds Memoriad</p>
-              <span class="sub">UAE Mathematics Olympiad</span>
-              <div class="card-popup">
-                <img src="photos/maths.png" alt="UAE Mathematics Olympiad Full">
-                <div class="popup-close-hint">Click anywhere to close</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <button class="slider-arrow" onclick="nextGallerySlide()">&#10095;</button>
-    </div>
-  </div>
-</div>
-
-<!-- Volunteering Section -->
-<div class="section fade" id="volunteering">
-  <div class="section-inner">
-    <div class="section-header"><span class="section-num">07</span><h2 class="section-title">Volunteering & Community</h2></div>
-    <div class="proj-grid">
-      
-      <div class="vol-card">
-        <h4>St. Mary's Catholic Church, Dubai</h4>
-        <div class="vol-org">Jesus Youth Teens · Core Team Member & Volunteer</div>
-        <p>Organized youth initiatives, community events, and annual Mercithon runners support. Played instrumental music (Violin & Piano) for major liturgical celebrations including Christmas, New Year, Good Friday, and Easter Sunday masses.</p>
-        <div class="vol-roles">
-          <span class="vol-role">Core Team Member</span>
-          <span class="vol-role">Altar Server</span>
-          <span class="vol-role">Usher</span>
-          <span class="vol-role">Lector</span>
-          <span class="vol-role">Choir Member</span>
-          <span class="vol-role">Instrumentalist</span>
-        </div>
-      </div>
-
-      <div class="vol-card">
-        <h4>St. Francis Xavier Catholic Church, Mudarangandi</h4>
-        <div class="vol-org">Young Christian Students (YCS) · Core Member</div>
-        <p>Active core member of the YCS movement. Served as Konkani Lector and official Ward Photographer for daily Way of the Cross devotions across 10+ households (August 2025).</p>
-        <div class="vol-roles">
-          <span class="vol-role">YCS Core Member</span>
-          <span class="vol-role">Konkani Lector</span>
-          <span class="vol-role">Ward Photographer</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Contact Section -->
-<div class="contact-section fade" id="contact">
-  <div class="contact-inner">
-    <div class="contact-text">
-      <h2>Let's connect.</h2>
-      <p>Based in Dubai & Udupi. Open to academic, medical research, music, and community collaborations.</p>
-    </div>
-    <div class="contact-right">
-      <button class="contact-btn" onclick="window.location.href='mailto:anort.mendonca@gmail.com'">Send an email →</button>
-      <div class="socials">
-        <a class="social-link" href="tel:+971589101067">
-          <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
-          +971 589101067
-        </a>
-        <a class="social-link" href="https://linkedin.com/in/anormendonca" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.227 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a class="social-link" href="https://instagram.com/anormendonca" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          @anormendonca
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <span>Anor Teran Mendonca © 2026</span>
-  <span>Dubai, UAE / Udupi, India</span>
-</footer>
-
-<div class="popup-overlay" id="popupOverlay"></div>
+  <footer class="desk-footer">
+    <p>Anor Teran Mendonca · Dubai, UAE / Udupi, India © 2026</p>
+  </footer>
 
 </body>
 </html>
