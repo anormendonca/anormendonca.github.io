@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MENDONCAN GAZETTE</title>
+    <!-- Google Fonts: Editorial Serif + Clean Sans + Technical Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0c0c0d;
+            --card-bg: #121214;
+            --border-color: #26262a;
+            --text-primary: #ededed;
+            --text-secondary: #8e8e93;
+            --accent-color: #d4a373; /* Subtle vintage bronze accent */
+            --font-header: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 1.5rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- MASTHEAD / HEADER --- */
+        header {
+            border-bottom: 2px solid var(--text-primary);
+            padding: 3rem 0 1.5rem 0;
+            text-align: center;
+        }
+
+        .header-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .site-title {
+            font-family: var(--font-header);
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .site-tagline {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            margin-bottom: 3rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-primary);
+        }
+
+        /* --- HERO FEATURED ARTICLE --- */
+        .hero-article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-article {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 380px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .category-tag {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-title {
+            font-family: var(--font-header);
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .spec-badge {
+            display: inline-flex;
+            gap: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+        }
+
+        /* --- GRID SECTION --- */
+        .grid-header {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .grid-header::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .articles-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .grid-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .grid-card .article-title {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 2px solid var(--text-primary);
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- MASTHEAD -->
+        <header>
+            <div class="header-meta">
+                <span>VOL. 01 • NO. 01</span>
+                <span>EST. 2026</span>
+                <span>OCTOBER 2026</span>
+            </div>
+            <h1 class="site-title">The Mendoncan Gazette</h1>
+            <p class="site-tagline">Automotive • Mechanical Aesthetics • Manual Living</p>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <ul>
+                <li><a href="#" class="active">// INDEX</a></li>
+                <li><a href="#">/ GARAGE</a></li>
+                <li><a href="#">/ OBJECTS & GEAR</a></li>
+                <li><a href="#">/ THE MANUAL</a></li>
+                <li><a href="#">/ ARCHIVE</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO FEATURED ARTICLE -->
+        <section class="hero-article">
+            <div class="hero-image-placeholder">
+                [ COVER IMAGE: 16:9 HIGH-CONTRAST STILL ]
+            </div>
+            <div class="hero-content">
+                <span class="category-tag">ISSUE FEATURE // GUIDE</span>
+                <h2 class="article-title"><a href="#">The Rookie’s Guide to Mechanical Watches & Tactile Engineering</a></h2>
+                <p class="article-excerpt">Why escapement mechanisms, brushed steel cases, and manual winding matter in an era of disposable digital glass.</p>
+                <div class="spec-badge">
+                    <span>READ TIME: 06 MIN</span>
+                    <span>TAG: HOROLOGY</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECONDARY ARTICLES GRID -->
+        <div class="grid-header">LATEST DISPATCHES</div>
+        
+        <section class="articles-grid">
+            <article class="grid-card">
+                <div>
+                    <span class="category-tag">GARAGE</span>
+                    <h3 class="article-title"><a href="#">Cold Starts: The Design Intelligence of 90s JDM Dashboards</a></h3>
+                    <p class="article-excerpt">Analog gauges, tactile toggle switches, and driver-focused ergonomics.</p>
+                </div>
+                <div class="spec-badge" style="margin-top: 1.5rem;">
+                    <span>VOL. 01</span>
+                    <span>AUTOS</span>
+                </div>
+            </article>
+
+            <article class="grid-card">
+                <div>
+                    <span class="category-tag">OBJECTS</span>
+                    <h3 class="article-title"><a href="#">Everyday Carry: 5 Tools That Outlast Their Owners</a></h3>
+                    <p class="article-excerpt">Machined brass pens, solid steel folding blades, and full-grain leather journals.</p>
+                </div>
+                <div class="spec-badge" style="margin-top: 1.5rem;">
+                    <span>VOL. 01</span>
+                    <span>GEAR</span>
+                </div>
+            </article>
+
+            <article class="grid-card">
+                <div>
+                    <span class="category-tag">THE MANUAL</span>
+                    <h3 class="article-title"><a href="#">Zero Fluff: Building a High-Performance Digital System</a></h3>
+                    <p class="article-excerpt">Stripping away modern web bloat to construct fast, distraction-free workspaces.</p>
+                </div>
+                <div class="spec-badge" style="margin-top: 1.5rem;">
+                    <span>VOL. 01</span>
+                    <span>TECH</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>THE MENDONCAN GAZETTE — ALL RIGHTS RESERVED.</p>
+            <p>DESIGNED FOR FAST RENDERING & ZERO DISTRACTION.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
