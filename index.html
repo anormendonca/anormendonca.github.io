@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anor Mendonca</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mono: {
+                            950: '#0a0a0a',
+                            900: '#121212',
+                            850: '#1a1a1a',
+                            800: '#262626',
+                            700: '#333333',
+                            600: '#525252',
+                            500: '#737373',
+                            400: '#a3a3a3',
+                            300: '#d4d4d4',
+                            200: '#e5e5e5',
+                            100: '#f5f5f5',
+                            50: '#fafafa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.45;
+        }
+        .section-header {
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+        .cv-grid-label {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 11px;
+        }
+        .topic-card {
+            border: 1px solid;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body class="bg-mono-950 text-mono-200 dark:bg-mono-950 dark:text-mono-200 transition-colors duration-150 antialiased selection:bg-mono-200 selection:text-mono-950">
+
+    <main id="top" class="max-w-5xl mx-auto px-4 py-6 space-y-5">
+
+        <!-- HEADER TOPIC CARD -->
+        <section class="topic-card bg-mono-900 border-mono-800 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-mono-800 pb-3">
+                <div>
+                    <h1 class="text-2xl font-bold text-white tracking-tight">Anor Mendonca</h1>
+                    <p class="text-xs font-mono text-mono-300 mt-0.5">SaintZ ’26 | Year 11 Medical Aspirant | Musician & Technical Builder</p>
+                    <p class="text-xs text-mono-400 mt-0.5">Dubai, United Arab Emirates</p>
+                </div>
+                <div class="flex items-center sm:justify-end gap-3 shrink-0">
+                    <button id="theme-toggle" onclick="toggleTheme()" class="px-2.5 py-1 border border-mono-700 bg-mono-950 dark:bg-mono-950 hover:bg-mono-800 dark:hover:bg-mono-800 text-mono-200 text-xs font-mono transition-colors">
+                        [<span id="theme-text">Light Mode</span>]
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono text-mono-400 pt-0.5">
+                <div><span class="text-mono-500">IGCSE Score:</span> 5 A*, 2 A, 1 B</div>
+                <div><span class="text-mono-500">Music Prep:</span> Piano Gr 6 / Violin Gr 4</div>
+                <div><span class="text-mono-500">Athletics:</span> Captain U2009 / Coach</div>
+                <div><span class="text-mono-500">Public Speaking:</span> Toastmasters D127</div>
+            </div>
+        </section>
+
+        <!-- CORE COMPETENCIES -->
+        <section id="competencies" class="topic-card bg-mono-900 border-mono-800">
+            <h2 class="section-header text-white border-mono-700">CORE COMPETENCIES</h2>
+            <div class="p-2.5 border border-mono-800 bg-mono-950 font-mono text-xs text-mono-200 leading-relaxed">
+                Music Performance (Piano/Violin/Keyboard), Music Theory, Public Speaking, Graphic Design, Web Development, Server Administration, Scientific Analysis, Academic Tutoring, Basketball Coaching & Leadership.
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="topic-card bg-mono-900 border-mono-800">
+            <h2 class="section-header text-white border-mono-700">ABOUT</h2>
+            <div class="text-xs leading-relaxed text-mono-300">
+                Year 11 medical aspirant with a strong scientific foundation aiming for a career in medicine. Combines rigorous academic training with leadership and communication through MUN, Toastmasters, and the Sandesha Foundation. Pianist, violinist, basketballer, youth organization creative designer, and self-directed technical builder—bringing analytical rigor, discipline, and multi-disciplinary problem-solving to future medical studies.
+            </div>
+        </section>
+
+        <!-- ACADEMICS & TEST SCORES -->
+        <section id="education" class="topic-card bg-mono-900 border-mono-800">
+            <h2 class="section-header text-white border-mono-700">ACADEMICS & TEST SCORES</h2>
+            <div class="space-y-2.5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mono-800 pb-1.5">
+                    <span class="font-bold text-white text-sm">St. Mary's Catholic High School, Dubai (2015 – 2026)</span>
+                    <span class="cv-grid-label text-mono-400">High School Diploma, Edexcel GCSEs/IGCSEs (Higher Tier)</span>
+                </div>
+                
+                <div class="text-xs text-mono-300 space-y-1">
+                    <p><strong>Grade Level:</strong> Year 1 to Year 11 | <strong>Official Score:</strong> 5 A*, 2 A, 1 B (Issued Aug 2026)</p>
+                    <p class="text-mono-400 italic">Note: Transitioned from standard GCSEs due to war.</p>
+                </div>
+
+                <div class="pt-1">
+                    <span class="cv-grid-label block mb-1 text-mono-400">INTERNATIONAL GCSES (HIGHER TIER) EXAMINATION BREAKDOWN:</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-1.5 font-mono text-xs">
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Biology:</span> Grade 9 (A*)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Chemistry:</span> Grade 9 (A*)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Physics:</span> Grade 9 (A*)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Maths:</span> Grade 9 (A*)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">RS (Christianity):</span> Grade 9 (A*)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Psychology:</span> Grade 7 (A)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">Computer Science:</span> Grade 7 (A)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950"><span class="font-bold text-white">English Language:</span> Grade 6 (B)</div>
+                        <div class="p-1.5 border border-mono-800 bg-mono-950 col-span-2 sm:col-span-1 md:col-span-2"><span class="font-bold text-white">Spoken English:</span> Distinction</div>
+                    </div>
+                </div>
+
+                <div class="text-xs text-mono-300 pt-1">
+                    <strong>Activities & Tutoring:</strong> Active in Science Clubs, Public Speaking, Basketball & Track, and Musical Instruments (Violin & Piano). Tutor for Mathematics Higher Tier and Sciences.
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section id="experience" class="topic-card bg-mono-900 border-mono-800 space-y-3">
+            <h2 class="section-header text-white border-mono-700">PROFESSIONAL EXPERIENCE</h2>
+            
+            <!-- Music Teacher -->
+            <div class="p-3 border border-mono-800 bg-mono-950 space-y-1">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mono-800 pb-1">
+                    <span class="font-bold text-white">Music Teacher — Freelance</span>
+                    <span class="cv-grid-label text-mono-400">Jan 2024 – Present (2 yrs 10 mos) | Dubai, UAE · Hybrid</span>
+                </div>
+                <ul class="list-disc list-inside text-xs text-mono-300 space-y-0.5 pt-1">
+                    <li>Deliver 1-on-1 piano, violin, keyboard, and music theory lessons for beginner and intermediate students.</li>
+                    <li><strong>Examination Prep:</strong> Guide learners through Trinity College London syllabus, sight-reading, technique, and theory requirements.</li>
+                    <li><strong>Mentorship:</strong> Tailor lessons to individual learning styles to build performance confidence and musical expression.</li>
+                </ul>
+            </div>
+
+            <!-- Graphic Designer -->
+            <div class="p-3 border border-mono-800 bg-mono-950 space-y-1">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mono-800 pb-1">
+                    <span class="font-bold text-white">Graphic Designer — Jesus Youth International</span>
+                    <span class="cv-grid-label text-mono-400">Sep 2025 – May 2026 (9 mos) | Dubai, UAE · Remote</span>
+                </div>
+                <ul class="list-disc list-inside text-xs text-mono-300 space-y-0.5 pt-1">
+                    <li>Designed posters, event branding, digital media, and social content for youth programmes on short deadlines.</li>
+                    <li>Coordinated with team leaders to deliver visuals; gained experience in layout, colour strategy, and audience-focused design.</li>
+                    <li>Assisted praise and worship by playing violin, pianica, singing, etc.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ATHLETICS & SPORTS LEADERSHIP -->
+        <section id="athletics" class="topic-card bg-mono-900 border-mono-800 space-y-3">
+            <h2 class="section-header text-white border-mono-700">ATHLETICS & SPORTS LEADERSHIP</h2>
+            <div class="space-y-2">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-mono-800 pb-1.5">
+                    <div>
+                        <span class="font-bold text-white text-sm">SaintZ & Roces & GiantZ & UJS Basketball</span>
+                        <span class="block text-xs font-mono text-mono-400">Basketball Training Programme / Athletic Development, Competitive Basketball</span>
+                    </div>
+                    <div class="text-xs font-mono font-semibold text-white mt-1 sm:mt-0">
+                        Captain U2009 Team & Youth Coach U2010
+                    </div>
+                </div>
+
+                <div class="text-xs text-mono-300 space-y-1">
+                    <p>Member of competitive youth basketball teams, participating in structured training programmes, tournaments, and league competitions. Captain of the U2009 Basketball Team, leading teammates on and off the court, while also coaching and mentoring the U2010 team. Developed teamwork, discipline, communication, leadership, and strategic thinking through competitive play and intensive training.</p>
+                    <p class="font-mono text-mono-400 text-3xs"><strong>Team Tenure:</strong> SaintZ 2020 to 2026 | GiantZ 2020 to 2023 | Roces 2024 to 2025 | UJS 2026 till present</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 font-mono text-xs pt-1">
+                    <div class="p-2 border border-mono-800 bg-mono-950 space-y-1">
+                        <span class="font-bold text-white block border-b border-mono-800 pb-0.5">CHAMPIONSHIP WINNERS</span>
+                        <ul class="space-y-0.5 text-mono-300">
+                            <li>• 10th GMA (2021–2022)</li>
+                            <li>• 15th Indian Basketball League U13 (2022) [4 PPG, 5 RPG]</li>
+                            <li>• 5th GMA U17 (2023–2024)</li>
+                            <li>• 9th SaintZ (2023–2024)</li>
+                            <li>• 11th SaintZ (2025–2026)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-2 border border-mono-800 bg-mono-950 space-y-1">
+                        <span class="font-bold text-white block border-b border-mono-800 pb-0.5">RUNNERS UP</span>
+                        <ul class="space-y-0.5 text-mono-300">
+                            <li>• SBAA Boys Div 3A Season 3 (2022)</li>
+                            <li>• 11th GMA (2022–2023)</li>
+                            <li>• DPS Sharjah Sundeep Batavia U18 (2023–2024)</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-2 border border-mono-800 bg-mono-950 space-y-1">
+                        <span class="font-bold text-white block border-b border-mono-800 pb-0.5">BRONZE & TOURNAMENTS</span>
+                        <ul class="space-y-0.5 text-mono-300">
+                            <li>• Jazzville B2009 (2023)</li>
+                            <li>• Jazzville B2009 (2024)</li>
+                            <li>• 10th SaintZ (2024–2025) [5 PPG, 5 RPG, 3 APG]</li>
+                            <li>• 12th GMA U17 (2024–2025) [10 PPG, 5 RPG, 3 APG]</li>
+                            <li>• TMS (2024–26), DPS (2024–26), Dubai School Games (2023), Udupi District Level '26</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS (7 ITEMS SEPARATE) -->
+        <section id="projects" class="topic-card bg-mono-900 border-mono-800 space-y-3">
+            <h2 class="section-header text-white border-mono-700">PROJECTS (7)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">1. Mechanical Solar System Model</span>
+                        <span class="text-mono-400">Heyzine</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Built a functional mechanical model of the solar system using a custom gear system to demonstrate planetary motion (Page 60, 2nd picture in middle). Designed gear ratios to replicate orbital periods, assembled mechanism, presented physics/kinematics principles.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">2. Notion Creator</span>
+                        <span class="text-mono-400">2025 – Present</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Designed and launched a suite of productivity systems, including yearly planners, achieving 135+ digital downloads through advanced relational database design and user-centric UX workflow optimisation.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">3. Neighborhood Recycling Initiative</span>
+                        <span class="text-mono-400">2020 – Present</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Toner Collection Drive: Collected 500+ used printer toners from households, offices, and community spaces to reduce landfill waste. Coordinated logistical pickups and pitched directly to community members.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">4. Web Developer</span>
+                        <span class="text-mono-400">2020 – Present</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Designed and built personal/business portfolios, web-based tools (calculators, clocks), custom digital study planners, and revision trackers. Applied programming logic, server admin, and workflow optimization.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">5. GCSE & IGCSE Resource Drive</span>
+                        <span class="text-mono-400">2024 – 2026</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Designed a structured, unified Google Drive resource hub for GCSE/IGCSE core sciences, maths, psychology, English, CS, and RS. Created topic notes, past paper databases, active-recall sheets, blurting templates, and syllabus checklists.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">6. Adnoc STEM</span>
+                        <span class="text-mono-400">2020 – 2023</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Completed STEM & energy e-learning programs: Formula Ethara at Home 2022, COP28 UAE Challenge, Summer Camp: Mission Digital Energy, Energy Camp, Ready Set Data!, EarthDay Zero Waste Kit, WorldWaterDay Weather, Pi Day Challenge.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1 col-span-1 md:col-span-2">
+                    <div class="flex justify-between font-mono text-xs">
+                        <span class="font-bold text-white">7. Minecraft Server Hosting & Management</span>
+                        <span class="text-mono-400">2020 – 2023</span>
+                    </div>
+                    <p class="text-xs text-mono-300">Hosted, optimized, and maintained multiplayer server infrastructure, managing plugin integration, role-based permissions, automated backups, and real-time troubleshooting. Scaled community of 200+ active and 500+ lifetime players.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LICENSES & CERTIFICATIONS -->
+        <section id="certifications" class="topic-card bg-mono-900 border-mono-800 space-y-2">
+            <h2 class="section-header text-white border-mono-700">LICENSES & CERTIFICATIONS</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 font-mono text-xs">
+                
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="font-bold text-white">Toastmasters Youth Leadership</div>
+                    <div class="text-mono-400">District 127 Toastmasters (Jun 2026)</div>
+                    <div class="text-mono-300 text-3xs mt-1">Skills: Public Speaking</div>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="font-bold text-white">Violin Grade 4</div>
+                    <div class="text-mono-400">Trinity College London (Jan 2025)</div>
+                    <div class="text-mono-300 text-3xs mt-1">Skills: Music Performance, Music Theory</div>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="font-bold text-white">Piano Grade 6</div>
+                    <div class="text-mono-400">Trinity College London (Jan 2025)</div>
+                    <div class="text-mono-300 text-3xs mt-1">Skills: Music Performance, Music Theory</div>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="font-bold text-white">Music Theory Grade 4</div>
+                    <div class="text-mono-400">Trinity College London</div>
+                    <div class="text-mono-300 text-3xs mt-1">Skills: Music Theory, Music Performance</div>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950 col-span-1 sm:col-span-2 lg:col-span-1">
+                    <div class="font-bold text-white">Keyboard Grade 3</div>
+                    <div class="text-mono-400">Trinity College London</div>
+                    <div class="text-mono-300 text-3xs mt-1">Skills: Music Theory, Music Performance</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HONORS & AWARDS -->
+        <section id="honors" class="topic-card bg-mono-900 border-mono-800 space-y-2">
+            <h2 class="section-header text-white border-mono-700">HONORS & AWARDS</h2>
+            <div class="space-y-1.5 font-mono text-xs">
+                
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="flex justify-between font-bold text-white">
+                        <span>Certificate of Academic Excellence</span>
+                        <span>Sep 2026</span>
+                    </div>
+                    <p class="text-mono-300 font-sans mt-0.5">Issued by St. Mary's Catholic Mangalorean Community (SMMC), Dubai. Associated with St. Mary's Catholic High School, Dubai. Awarded in recognition of outstanding academic performance and dedication to educational achievement.</p>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="flex justify-between font-bold text-white">
+                        <span>Honourable Mention – SaintZ Model United Nations</span>
+                        <span>Jun 2025</span>
+                    </div>
+                    <p class="text-mono-300 font-sans mt-0.5">Issued by SaintZ MUN 2025 in the Commission on the Status of Women (CSW). Researched international policy frameworks, represented the French delegation's stance on women's rights, delivered impromptu speeches during formal debate, and sponsored committee resolutions.</p>
+                </div>
+
+                <div class="p-2 border border-mono-800 bg-mono-950">
+                    <div class="flex justify-between font-bold text-white">
+                        <span>UAE Mathematics Olympiad Selection Participant</span>
+                        <span>May 2024</span>
+                    </div>
+                    <p class="text-mono-300 font-sans mt-0.5">Issued by Sparkler Minds Memoriad UAE. Completed Rounds 1 and 2 of the UAE Mathematics Olympiad selection process; tested on high-speed quantitative problem-solving and mathematical logic under timed competition conditions.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VOLUNTEERING & COMMUNITY ENGAGEMENT -->
+        <section id="volunteering" class="topic-card bg-mono-900 border-mono-800 space-y-2">
+            <h2 class="section-header text-white border-mono-700">VOLUNTEERING & COMMUNITY ENGAGEMENT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
+                
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <span class="font-bold text-white block border-b border-mono-800 pb-0.5">St. Mary's Catholic Church, Dubai</span>
+                    <p class="text-mono-300"><strong>Roles:</strong> Jesus Youth Teens Core Team Member, Altar Server, Usher, Lector, Choir Member, Mercithon runner, Instrumentalist (Violin & Piano).</p>
+                    <p class="text-mono-300"><strong>Impact & Skills:</strong> Organized youth initiatives and community events. Played for important masses like Christmas, New Year, Good Friday, Easter Sunday etc. Developed leadership, public speaking, and teamwork capabilities.</p>
+                </div>
+
+                <div class="p-2.5 border border-mono-800 bg-mono-950 space-y-1">
+                    <span class="font-bold text-white block border-b border-mono-800 pb-0.5">St. Francis Xavier Catholic Church, Mudarangandi</span>
+                    <p class="text-mono-300"><strong>Roles:</strong> Active Core Member of the Young Christian Students (YCS) movement, Konkani Lector, Ward Photographer.</p>
+                    <p class="text-mono-300"><strong>Impact & Skills:</strong> Led daily Way of the Cross devotions across 10+ households (August 2025). Promoted Konkani language engagement and children's literary appreciation.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section id="languages" class="topic-card bg-mono-900 border-mono-800">
+            <h2 class="section-header text-white border-mono-700">LANGUAGES</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
+                <div class="p-2 border border-mono-800 bg-mono-950"><span class="font-bold text-white block">English</span> Native or bilingual proficiency</div>
+                <div class="p-2 border border-mono-800 bg-mono-950"><span class="font-bold text-white block">Konkani</span> Native or bilingual proficiency</div>
+                <div class="p-2 border border-mono-800 bg-mono-950"><span class="font-bold text-white block">Hindi</span> Professional working proficiency</div>
+                <div class="p-2 border border-mono-800 bg-mono-950"><span class="font-bold text-white block">Kannada</span> Limited working proficiency</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-mono-800 py-4 mt-8 bg-mono-950 text-xs font-mono text-mono-400">
+        <div class="max-w-5xl mx-auto px-4 flex justify-between items-center">
+            <div>
+                <span class="font-bold text-white">Anor Mendonca</span>
+            </div>
+            <div>
+                Dubai, UAE
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHT / DARK MODE TOGGLE SCRIPT -->
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeText = document.getElementById('theme-text');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                document.body.classList.replace('bg-mono-950', 'bg-white');
+                document.body.classList.replace('text-mono-200', 'text-mono-900');
+                
+                document.querySelectorAll('.topic-card, .bg-mono-900').forEach(el => {
+                    el.classList.replace('bg-mono-900', 'bg-mono-50');
+                    el.classList.replace('border-mono-800', 'border-mono-200');
+                });
+                document.querySelectorAll('.bg-mono-950').forEach(el => {
+                    el.classList.replace('bg-mono-950', 'bg-white');
+                    el.classList.replace('border-mono-800', 'border-mono-200');
+                });
+                document.querySelectorAll('.text-white').forEach(el => {
+                    el.classList.replace('text-white', 'text-mono-1000');
+                });
+                document.querySelectorAll('.text-mono-300, .text-mono-400').forEach(el => {
+                    el.classList.replace('text-mono-300', 'text-mono-700');
+                    el.classList.replace('text-mono-400', 'text-mono-600');
+                });
+                themeText.textContent = 'Dark Mode';
+            } else {
+                html.classList.add('dark');
+                document.body.classList.replace('bg-white', 'bg-mono-950');
+                document.body.classList.replace('text-mono-900', 'text-mono-200');
+                
+                document.querySelectorAll('.topic-card, .bg-mono-50').forEach(el => {
+                    el.classList.replace('bg-mono-50', 'bg-mono-900');
+                    el.classList.replace('border-mono-200', 'border-mono-800');
+                });
+                document.querySelectorAll('.bg-white').forEach(el => {
+                    el.classList.replace('bg-white', 'bg-mono-950');
+                    el.classList.replace('border-mono-200', 'border-mono-800');
+                });
+                document.querySelectorAll('.text-mono-1000').forEach(el => {
+                    el.classList.replace('text-mono-1000', 'text-white');
+                });
+                document.querySelectorAll('.text-mono-700, .text-mono-600').forEach(el => {
+                    el.classList.replace('text-mono-700', 'text-mono-300');
+                    el.classList.replace('text-mono-600', 'text-mono-400');
+                });
+                themeText.textContent = 'Light Mode';
+            }
+        }
+    </script>
+</body>
+</html>
