@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miserable-anor ~ Y2K personal site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=VT323&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-pattern: #d6d6d6;
+        --window-bg: #ececec;
+        --border-light: #ffffff;
+        --border-dark: #808080;
+        --border-darker: #404040;
+      }
+
+      body {
+        font-family: 'MS Sans Serif', 'Geneva', 'Tahoma', 'Verdana', sans-serif;
+        background-color: #c0c0c0;
+        /* Repeating vintage cross/dot grid background matching miserabledolly.net */
+        background-image: 
+          radial-gradient(#888888 1px, transparent 1px), 
+          radial-gradient(#888888 1px, #d4d4d4 1px);
+        background-size: 16px 16px;
+        background-position: 0 0, 8px 8px;
+        color: #000;
+        font-size: 11px;
+        margin: 0;
+        padding: 12px;
+      }
+
+      /* Authentic Win95 / Y2K Beveled Outset & Inset Borders */
+      .retro-outset {
+        border-top: 2px solid var(--border-light);
+        border-left: 2px solid var(--border-light);
+        border-right: 2px solid var(--border-darker);
+        border-bottom: 2px solid var(--border-darker);
+        background-color: var(--window-bg);
+      }
+
+      .retro-inset {
+        border-top: 2px solid var(--border-darker);
+        border-left: 2px solid var(--border-darker);
+        border-right: 2px solid var(--border-light);
+        border-bottom: 2px solid var(--border-light);
+        background: #ffffff;
+      }
+
+      .gothic-header-title {
+        font-family: 'UnifrakturMaguntia', 'Times New Roman', serif;
+        font-size: 52px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px #000000, -1px -1px 0px #000000;
+        letter-spacing: -1px;
+      }
+
+      /* Custom retro scrollbars */
+      ::-webkit-scrollbar {
+        width: 14px;
+        height: 14px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #e0e0e0;
+        border: 1px solid #808080;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c0c0c0;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #404040;
+        border-bottom: 1px solid #404040;
+      }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-900 selection:text-white">
+
+  <div class="max-w-[1200px] mx-auto space-y-3">
+
+    <!-- TOP BANNER HEADER -->
+    <header class="retro-outset p-2 relative">
+      <div class="relative w-full h-40 bg-zinc-800 border border-gray-600 rounded-sm overflow-hidden flex items-end justify-between px-6 pb-3"
+           style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://i.pinimg.com/736x/f0/69/3b/f0693bc52142a0cc587c5793a9ce9984.jpg') center/cover no-repeat;">
+        
+        <!-- Sticky note top left matching miserabledolly.net -->
+        <div class="absolute top-3 left-3 bg-yellow-100 border border-black p-1.5 rounded text-[10px] shadow-[2px_2px_0px_#000] flex items-center gap-1 font-mono">
+          <span>🐱</span>
+          <span class="font-bold">Please be nice to me. I love you.</span>
+        </div>
+
+        <!-- Right Side Gothic Banner Title -->
+        <div class="w-full text-right">
+          <h1 class="gothic-header-title leading-none select-none">miserable-anor</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3-COLUMN MAIN LAYOUT GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-3">
+
+      <!-- ================= LEFT SIDEBAR (Cols: 3) ================= -->
+      <aside class="md:col-span-3 space-y-3">
+        
+        <!-- DYNAMIC VISITOR COUNT BOX -->
+        <div class="retro-outset p-2 text-center">
+          <div class="font-bold text-[10px] text-gray-700 uppercase tracking-widest mb-1 font-mono">✦ VISITOR COUNT ✦</div>
+          <div id="visitor-count-box" class="retro-inset inline-block bg-black px-4 py-1 font-mono text-green-400 font-bold text-sm tracking-widest border border-gray-600">
+            000000
+          </div>
+          <div class="text-[9px] text-gray-500 font-mono mt-1">Live Visit Counter</div>
+        </div>
+
+        <!-- MAIN NAVIGATION MENU -->
+        <div class="retro-outset">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-[11px] flex justify-between items-center">
+            <span>✖ main ✖</span>
+            <span class="text-[9px] text-gray-600">v2.0</span>
+          </div>
+          <ul class="p-2 space-y-1 font-mono text-xs">
+            <li><button onclick="switchTab('home')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ home / intro</button></li>
+            <li><button onclick="switchTab('about')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ about & bio</button></li>
+            <li><button onclick="switchTab('basketball')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ basketball hub 🏀</button></li>
+            <li><button onclick="switchTab('academics')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ academics & igcse 🎓</button></li>
+            <li><button onclick="switchTab('music')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ music & performances 🎻</button></li>
+            <li><button onclick="switchTab('faith')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ catholic faith †</button></li>
+            <li><button onclick="switchTab('projects')" class="hover:underline text-blue-900 font-semibold text-left w-full">➔ projects & notion 🛠️</button></li>
+          </ul>
+        </div>
+
+        <!-- FUN SECTION MENU -->
+        <div class="retro-outset">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-[11px]">
+            <span>✖ fun ✖</span>
+          </div>
+          <ul class="p-2 space-y-1 font-mono text-xs">
+            <li><button onclick="switchTab('cars')" class="hover:underline text-blue-900 font-semibold text-left w-full">🏎️ vintage cars & bikes</button></li>
+            <li><button onclick="switchTab('fashion')" class="hover:underline text-blue-900 font-semibold text-left w-full">👔 90s & old money fashion</button></li>
+            <li><button onclick="switchTab('hobbies')" class="hover:underline text-blue-900 font-semibold text-left w-full">🎮 retro gaming & planes</button></li>
+            <li><button onclick="switchTab('trading')" class="hover:underline text-blue-900 font-semibold text-left w-full">📈 day trading & chess</button></li>
+          </ul>
+        </div>
+
+        <!-- SHRINES MENU -->
+        <div class="retro-outset">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-[11px]">
+            <span>✖ shrines ✖</span>
+          </div>
+          <ul class="p-2 space-y-1 font-mono text-xs">
+            <li><button onclick="switchTab('kobe')" class="hover:underline text-blue-900 font-semibold text-left w-full">💛 kobe bryant & lakers</button></li>
+            <li><button onclick="switchTab('f1')" class="hover:underline text-blue-900 font-semibold text-left w-full">🏎️ max verstappen / red bull</button></li>
+            <li><button onclick="switchTab('porsche')" class="hover:underline text-blue-900 font-semibold text-left w-full">🚘 porsche 911 & s15</button></li>
+          </ul>
+        </div>
+
+        <!-- QUICK BIO MINI CARD -->
+        <div class="retro-outset p-2 text-[10px] space-y-1">
+          <div class="font-bold border-b border-gray-400 pb-0.5">✝️ QUICK PROFILE</div>
+          <div><strong>Name:</strong> Anor Teran Mendonca</div>
+          <div><strong>DOB:</strong> March 17, 2009</div>
+          <div><strong>Height/Weight:</strong> 180cm / 60kg</div>
+          <div><strong>Face Shape:</strong> Square Face</div>
+          <div><strong>Origin:</strong> Mangalorean Catholic</div>
+          <div><strong>Base:</strong> Jnanasudha Udupi ↔ Dubai (UAE)</div>
+        </div>
+
+      </aside>
+
+      <!-- ================= CENTER COLUMN (Cols: 6) ================= -->
+      <main class="md:col-span-6 space-y-3">
+
+        <!-- DYNAMIC TAB PANELS -->
+
+        <!-- TAB 1: HOME PANEL -->
+        <div id="panel-home" class="tab-panel retro-outset p-3 space-y-3">
+          <div class="retro-inset p-3 bg-white space-y-2">
+            <h2 class="text-xs font-bold text-gray-900 border-b border-gray-300 pb-1 flex justify-between">
+              <span>WELCOME TO MY RETRO WEB SPACE!</span>
+              <span>Jnanasudha Udupi | St. Mary's Dubai</span>
+            </h2>
+            <p class="text-xs leading-relaxed">
+              Hello, I'm <strong>Anor Teran Mendonca</strong> (born March 17, 2009)! Welcome to my site! This is where I document my academic journey, basketball career, music, vintage cars, retro gaming, and technical projects.
+            </p>
+            <p class="text-xs leading-relaxed">
+              I am a Year 11 / 1st PUC medical aspirant preparing for <strong>NEET</strong> in Jnanasudha Udupi, India, coming from <strong>St. Mary's Catholic High School, Dubai (UAE)</strong>. My family is still in Dubai while I study here. I aim to specialize in medicine/pediatrics and return to work in the UAE.
+            </p>
+          </div>
+
+          <!-- NOTICE / PROFILE BOX -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="retro-inset p-2 bg-zinc-50 space-y-1">
+              <div class="font-bold text-[11px] text-indigo-900 border-b border-gray-300 pb-0.5">📍 CURRENT STATUS</div>
+              <div class="text-[10px] leading-tight space-y-1">
+                <div>• <strong>Education:</strong> 1st PUC NEET Med Aspirant</div>
+                <div>• <strong>Academic Tier:</strong> IGCSE (5A*, 2A, 1B)</div>
+                <div>• <strong>Role:</strong> U2009 Basketball Captain & Coach</div>
+                <div>• <strong>Instruments:</strong> Violin, Piano, Keyboard</div>
+              </div>
+            </div>
+
+            <div class="retro-inset p-2 bg-yellow-50 space-y-1">
+              <div class="font-bold text-[11px] text-amber-900 border-b border-gray-300 pb-0.5">💡 RECENT HIGHLIGHTS</div>
+              <div class="text-[10px] space-y-1">
+                <div>• <strong>Instagram:</strong> <a href="https://instagram.com/vwvampire" target="_blank" class="text-blue-800 underline">@vwvampire</a></div>
+                <div>• <strong>Toner Recycling:</strong> 500+ collected</div>
+                <div>• <strong>Minecraft Admin:</strong> 200+ active players</div>
+                <div>• <strong>Notion Suite:</strong> 135+ downloads</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ABOUT & BIO PANEL -->
+        <div id="panel-about" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-xs">
+            👤 ABOUT ME & PERSONAL PROFILE
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs leading-relaxed space-y-2">
+            <p><strong>Full Name:</strong> Anor Teran Mendonca</p>
+            <p><strong>Background:</strong> Mangalorean Catholic youth born in 2009. Completed Year 1 to 11 at St. Mary's Catholic High School, Dubai, and now residing in Udupi, Karnataka, India for NEET preparation.</p>
+            <p><strong>Physical Attributes:</strong> 180 cm tall, 60 kgs, square face shape, vintage 90s old money aesthetic (baggy pants + proper fitted upperwear).</p>
+            <p><strong>Languages:</strong> English (Native), Konkani (Native/Bilingual), Hindi (Professional), Kannada (Limited working).</p>
+            <p><strong>Future Aspiration:</strong> Medical doctor (pediatrics focus) practicing in the UAE.</p>
+          </div>
+        </div>
+
+        <!-- TAB 3: BASKETBALL & SPORTS PANEL -->
+        <div id="panel-basketball" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-amber-900 text-white px-2 py-1 font-bold text-xs flex justify-between">
+            <span>🏀 BASKETBALL HUB & TRACK RECORD</span>
+            <span>U2009 Captain</span>
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-3">
+            <div>
+              <h4 class="font-bold text-amber-900 border-b border-amber-200 pb-0.5 mb-1">👑 Team Leadership & Roles</h4>
+              <p>• <strong>Captain:</strong> U2009 Basketball Team (leading on/off court)</p>
+              <p>• <strong>Coach/Mentor:</strong> U2010 Basketball Team</p>
+              <p>• <strong>Affiliated Teams:</strong> SaintZ (2020–2026), GiantZ (2020–2023), Roces (2024–2025), UJS (2026–present)</p>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-amber-900 border-b border-amber-200 pb-0.5 mb-1">🥇 Championship Titles</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-0.5">
+                <li><strong>10th GMA Winners</strong> (2021–2022)</li>
+                <li><strong>15th Indian Basketball League U13 Winners</strong> (2022) — <em>4 PPG, 5 RPG</em></li>
+                <li><strong>5th GMA U17 Winners</strong> (2023–2024)</li>
+                <li><strong>9th SaintZ Winners</strong> (2023–2024)</li>
+                <li><strong>11th SaintZ Winners</strong> (2025–2026)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-amber-900 border-b border-amber-200 pb-0.5 mb-1">🥈 Runners-Up & Bronze</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-0.5">
+                <li><strong>Runners-Up:</strong> SBAA Boys Div 3A (2022), 11th GMA (2022–23), DPS Sharjah Sundeep Batavia U18 (2023–24)</li>
+                <li><strong>Bronze Finish:</strong> Jazzville B2009 (2023 & 2024), 10th SaintZ (2024–25, <em>5 PPG, 5 RPG, 3 APG</em>)</li>
+                <li><strong>Regional Competition:</strong> 12th GMA U17 (<em>10 PPG, 5 RPG, 3 APG</em>), Dubai School Games, Udupi District Level '26</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-amber-900 border-b border-amber-200 pb-0.5 mb-1">🏃 Track & Field Records</h4>
+              <p class="text-[11px]">School Athletic Meet: <strong>1st Place 200m Sprint</strong>, <strong>1st Place Relay</strong>, <strong>3rd Place 800m</strong> run.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: ACADEMICS & IGCSE PANEL -->
+        <div id="panel-academics" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-blue-900 text-white px-2 py-1 font-bold text-xs">
+            🎓 ACADEMICS & IGCSE SCORECARD
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-3">
+            <div>
+              <h4 class="font-bold text-blue-900 border-b border-blue-200 pb-1 mb-1">St. Mary's Catholic High School, Dubai</h4>
+              <p class="text-[11px] mb-2">Edexcel International GCSEs (Higher Tier) — <strong>5 A*, 2 A, 1 B</strong></p>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 font-mono text-[11px] bg-slate-100 p-2 rounded border border-slate-300">
+                <div class="bg-white p-1 border">Biology: <strong class="text-green-700">9 (A*)</strong></div>
+                <div class="bg-white p-1 border">Chemistry: <strong class="text-green-700">9 (A*)</strong></div>
+                <div class="bg-white p-1 border">Physics: <strong class="text-green-700">9 (A*)</strong></div>
+                <div class="bg-white p-1 border">Maths: <strong class="text-green-700">9 (A*)</strong></div>
+                <div class="bg-white p-1 border">Religious St: <strong class="text-green-700">9 (A*)</strong></div>
+                <div class="bg-white p-1 border">Psychology: <strong class="text-blue-700">7 (A)</strong></div>
+                <div class="bg-white p-1 border">Computer Sci: <strong class="text-blue-700">7 (A)</strong></div>
+                <div class="bg-white p-1 border">English Lang: <strong class="text-orange-700">6 (B)</strong></div>
+                <div class="bg-white p-1 border">Spoken Eng: <strong class="text-purple-700">Distinction</strong></div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-blue-900 border-b border-blue-200 pb-1 mb-1">Honors & Competitions</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-1">
+                <li><strong>SMMC Academic Excellence Award:</strong> Certificate of Academic Excellence (Sep 2026)</li>
+                <li><strong>SaintZ Model United Nations '25:</strong> Honorable Mention (CSW Commission), French Delegate</li>
+                <li><strong>UAE Mathematics Olympiad:</strong> Selected Participant (Rounds 1 & 2 - high-speed quantitative logic)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: MUSIC PANEL -->
+        <div id="panel-music" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-purple-900 text-white px-2 py-1 font-bold text-xs">
+            🎻 MUSIC PERFORMANCES & EXAMINATIONS
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-3">
+            <div>
+              <h4 class="font-bold text-purple-900 border-b border-purple-200 pb-1 mb-1">Trinity College London Qualifications</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-1">
+                <li><strong>Piano Grade 6:</strong> Music Performance & Advanced Theory</li>
+                <li><strong>Violin Grade 4:</strong> Solo Instrumental & Sight Reading</li>
+                <li><strong>Theory Grade 4:</strong> Music Theory & Composition</li>
+                <li><strong>Keyboard Grade 3:</strong> Technique & Repertoire</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-purple-900 border-b border-purple-200 pb-1 mb-1">Freelance Music Teacher & Performances</h4>
+              <p class="text-[11px]">Freelance instructor in Dubai providing 1-on-1 piano, violin, and theory lessons. Soloist performer for "Mary, Did You Know?" on violin (featured in school newsletter).</p>
+              <p class="text-[11px] mt-1"><em>Future Goals:</em> Currently learning drums and guitar!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: CATHOLIC FAITH PANEL -->
+        <div id="panel-faith" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-red-950 text-white px-2 py-1 font-bold text-xs flex justify-between">
+            <span>✝️ CATHOLIC FAITH & PARISH SERVICE</span>
+            <span>St. Mary's Dubai & St. Francis Xavier</span>
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-3">
+            <div>
+              <h4 class="font-bold text-red-900 border-b border-red-200 pb-1 mb-1">St. Mary's Catholic Church, Dubai</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-1">
+                <li><strong>Youth Core Team Member:</strong> Organizing youth spiritual initiatives</li>
+                <li><strong>Liturgical Ministries:</strong> Altar Server, Lector, Usher, Choir Member</li>
+                <li><strong>Musician:</strong> Played piano and violin for Christmas, New Year's, Good Friday, Easter Sunday masses</li>
+                <li><strong>Mercithon Runner:</strong> Active participant in charity initiative</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-red-900 border-b border-red-200 pb-1 mb-1">St. Francis Xavier Church, Mudarangandi & Community</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-1">
+                <li><strong>YCS (Young Christian Students) Active Core Member</strong></li>
+                <li><strong>Konkani Dramatic Performance ("Kaavy Prayog"):</strong> Played main character in literary presentation</li>
+                <li><strong>Noktiram Children's Poetry Recital:</strong> Konkani poetry performer</li>
+                <li><strong>Ward Photographer:</strong> Documented daily Way of the Cross devotions across 10+ households</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 7: PROJECTS PANEL -->
+        <div id="panel-projects" class="tab-panel hidden retro-outset p-3 space-y-3">
+          <div class="bg-teal-900 text-white px-2 py-1 font-bold text-xs">
+            🛠️ PROJECTS, STEM & VOLUNTEERING
+          </div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-3">
+            <div>
+              <h4 class="font-bold text-teal-900 border-b border-teal-200 pb-1 mb-1">Digital & Engineering Projects</h4>
+              <ul class="list-disc list-inside text-[11px] space-y-1">
+                <li><strong>Notion Creator (2025–Present):</strong> Productivity suites & planners, 135+ digital downloads</li>
+                <li><strong>GCSE/IGCSE Resource Drive:</strong> Unified hub for past papers, blurting sheets, and revision notes</li>
+                <li><strong>Mechanical Orrery Solar System Model:</strong> Functional gear-based planetary motion model</li>
+                <li><strong>Minecraft Server Host & Admin (2020–23):</strong> Managed infrastructure for 200+ active & 500+ lifetime players</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-teal-900 border-b border-teal-200 pb-1 mb-1">Sustainability & Community Impact</h4>
+              <p class="text-[11px]"><strong>Neighborhood Recycling Toner Drive (EEG Campaign):</strong> Collected over 500 used printer toner cartridges across households and offices to reduce electronic waste.</p>
+              <p class="text-[11px] mt-1"><strong>ADNOC STEM Challenge:</strong> Formula Ethara at Home, COP28 UAE Challenge, Mission Digital Energy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 8-12: INTERESTS & SHRINES -->
+        <div id="panel-cars" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-zinc-800 text-white p-1 font-bold text-xs">🏎️ VINTAGE CARS & BIKES SHRINE</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Porsche 911:</strong> Air-cooled classics, timeless rear-engine engineering perfection.</p>
+            <p><strong>Nissan Silvia S15:</strong> Peak 90s JDM styling, SR20DET, drift icon.</p>
+            <p><strong>Classic Toyota Land Cruisers:</strong> FJ40/FJ60 rugged durability & vintage aesthetic.</p>
+            <p><strong>Vintage Motorcycles:</strong> Retro cafe racers & classic Japanese twin engines.</p>
+          </div>
+        </div>
+
+        <div id="panel-fashion" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-amber-950 text-white p-1 font-bold text-xs">👔 FASHION & STYLE</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Aesthetic:</strong> Vintage 90s Old Money style.</p>
+            <p><strong>Fit Preference:</strong> Baggy relaxed-fit trousers/pants paired with crisp, proper fitting upperwear.</p>
+            <p><strong>Vibe:</strong> Retro prep, clean silhouettes, timeless neutral color palettes.</p>
+          </div>
+        </div>
+
+        <div id="panel-hobbies" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-indigo-950 text-white p-1 font-bold text-xs">🎮 RETRO GAMING & PLANES</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Retro Gaming:</strong> 90s arcade classics, PS1/PS2 era titles, Cyberpunk 2077 universe.</p>
+            <p><strong>Aviation:</strong> Passionate about commercial airliners and military aviation history.</p>
+            <p><strong>Outdoor & Creative:</strong> Hiking enthusiast, sketch artist, and budding photographer.</p>
+          </div>
+        </div>
+
+        <div id="panel-trading" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-emerald-950 text-white p-1 font-bold text-xs">📈 DAY TRADING & CHESS</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Day Trading:</strong> Learning price action, technical analysis, and market risk management.</p>
+            <p><strong>Chess:</strong> Tactical openings, endgames, and quantitative strategy practice.</p>
+          </div>
+        </div>
+
+        <div id="panel-kobe" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-purple-950 text-yellow-400 p-1 font-bold text-xs">💛 KOBE BRYANT & LAKERS SHRINE</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Mamba Mentality:</strong> Inspired by Kobe Bryant's relentless work ethic and obsession with self-improvement.</p>
+            <p><strong>Fandom:</strong> LA Lakers fan because of Kobe 24 | Dallas Mavericks fan because of Luka Dončić!</p>
+          </div>
+        </div>
+
+        <div id="panel-f1" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-red-900 text-white p-1 font-bold text-xs">🏎️ FORMULA 1 & RED BULL SHRINE</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p><strong>Team & Driver:</strong> Heart for Scuderia Ferrari, but huge fan of Max Verstappen & Red Bull Racing excellence!</p>
+          </div>
+        </div>
+
+        <div id="panel-porsche" class="tab-panel hidden retro-outset p-3 space-y-2">
+          <div class="bg-stone-900 text-white p-1 font-bold text-xs">🚘 PORSCHE 911 & SILVIA S15</div>
+          <div class="retro-inset p-3 bg-white text-xs space-y-2">
+            <p>Detailed technical shrine to classic chassis, air-cooled engines, and 90s automotive aesthetics.</p>
+          </div>
+        </div>
+
+        <!-- SPOTIFY WEBDECK PLAYER (Exact Spotify iFrame Embed) -->
+        <div class="retro-outset p-2">
+          <div class="bg-gray-800 text-white px-2 py-1 font-bold text-[11px] flex justify-between items-center">
+            <span>📻 WEBDECK PLAYER</span>
+            <span class="text-[9px] text-green-400">● ONLINE</span>
+          </div>
+          <div class="retro-inset p-2 bg-black mt-2">
+            <iframe 
+              data-testid="embed-iframe" 
+              style="border-radius:12px" 
+              src="https://open.spotify.com/embed/playlist/7puc8DPteaIKzEvQFox7mW?utm_source=generator&theme=0&si=ef83f7c767504537" 
+              width="100%" 
+              height="152" 
+              frameBorder="0" 
+              allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RETRO 88x31 WEB BADGES ROW -->
+        <div class="retro-outset p-2 space-y-1 text-center">
+          <div class="text-[10px] font-bold text-gray-700 uppercase tracking-wider">✦ RETRO 88x31 BADGES ✦</div>
+          <div class="flex flex-wrap justify-center gap-1.5 pt-1">
+            <span class="px-2 py-0.5 bg-red-950 text-amber-300 font-mono text-[9px] font-bold border border-amber-500">CATHOLIC †</span>
+            <span class="px-2 py-0.5 bg-purple-950 text-yellow-400 font-mono text-[9px] font-bold border border-purple-500">KOBE 24 🐍</span>
+            <span class="px-2 py-0.5 bg-blue-900 text-red-400 font-mono text-[9px] font-bold border border-red-500">RED BULL F1 🏎️</span>
+            <span class="px-2 py-0.5 bg-stone-900 text-white font-mono text-[9px] font-bold border border-gray-400">PORSCHE 911 🚘</span>
+            <span class="px-2 py-0.5 bg-stone-800 text-white font-mono text-[9px] border border-stone-500">MACINTOSH 💻</span>
+            <span class="px-2 py-0.5 bg-amber-800 text-amber-100 font-mono text-[9px] border border-amber-400">TRINITY MUSIC 🎻</span>
+            <span class="px-2 py-0.5 bg-blue-950 text-cyan-300 font-mono text-[9px] border border-cyan-400">HTML5 ⚡</span>
+            <span class="px-2 py-0.5 bg-black text-green-400 font-mono text-[9px] border border-green-600">NO AI 🚫</span>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- ================= RIGHT SIDEBAR (Cols: 3) ================= -->
+      <aside class="md:col-span-3 space-y-3">
+
+        <!-- CBOX SHOUTBOX WIDGET -->
+        <div class="retro-outset">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-[11px] flex justify-between">
+            <span>💬 CBOX SHOUTBOX</span>
+            <span class="text-[9px] text-gray-600">v4.1</span>
+          </div>
+          <div class="p-2 space-y-2">
+            <!-- Stream Container -->
+            <div id="cbox-stream" class="retro-inset h-44 p-2 overflow-y-auto bg-white font-mono text-[10px] space-y-1.5 border">
+              <!-- Dynamic messages get inserted here via JavaScript -->
+            </div>
+
+            <!-- Form -->
+            <div class="space-y-1">
+              <input type="text" id="cbox-user" placeholder="Name..." class="w-full retro-inset px-1.5 py-0.5 text-xs" />
+              <textarea id="cbox-text" rows="2" placeholder="Write message..." class="w-full retro-inset px-1.5 py-0.5 text-xs resize-none"></textarea>
+              <button onclick="addCboxEntry()" class="retro-outset w-full py-1 text-xs font-bold bg-gray-200 active:translate-y-0.5">
+                SUBMIT SHOUT
+              </button>
+            </div>
+            
+            <!-- LIVE CBOX EMBED EXPLANATION / GUIDE -->
+            <!-- 
+              TO CONNECT A REAL LIVE CBOX WHEN HOSTING ON NEOCITIES:
+              1. Register a free account at https://www.cbox.ws
+              2. Copy your unique iframe code snippet from the Cbox dashboard.
+              3. Replace the div#cbox-stream and form inputs above with your Cbox iframe code:
+                 <iframe src="https://www5.cbox.ws/box/?boxid=YOUR_BOX_ID&boxtag=YOUR_TAG" width="100%" height="250" frameborder="0" scrolling="auto"></iframe>
+            -->
+          </div>
+        </div>
+
+        <!-- UPDATES LOG -->
+        <div class="retro-outset">
+          <div class="bg-gray-300 border-b border-gray-400 px-2 py-1 font-bold text-[11px]">
+            <span>📰 UPDATES LOG</span>
+          </div>
+          <div class="retro-inset p-2 m-2 bg-white text-[10px] h-36 overflow-y-auto space-y-1.5 font-mono">
+            <div class="border-b border-gray-200 pb-1">
+              <strong class="text-blue-900">Sep 2026:</strong> Awarded SMMC Academic Excellence Certificate.
+            </div>
+            <div class="border-b border-gray-200 pb-1">
+              <strong class="text-blue-900">Aug 2026:</strong> Received IGCSE Results (5A*, 2A, 1B).
+            </div>
+            <div class="border-b border-gray-200 pb-1">
+              <strong class="text-blue-900">Jun 2026:</strong> Toastmasters Youth Leadership Certificate.
+            </div>
+            <div>
+              <strong class="text-blue-900">Jan 2025:</strong> Passed Trinity Piano Grade 6 & Violin Grade 4.
+            </div>
+          </div>
+        </div>
+
+        <!-- LAST.FM RECENT TRACKS -->
+        <div class="retro-outset">
+          <div class="bg-gray-900 text-white px-2 py-1 font-bold text-[11px]">
+            <span>🎵 LAST.FM RECENT TRACKS</span>
+          </div>
+          <div class="retro-inset p-2 m-2 bg-black text-green-400 text-[10px] font-mono space-y-1.5">
+            <div class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>▶ "Mary, Did You Know?"</span>
+              <span class="text-gray-400 text-[8px]">Violin Solo</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>▶ Genesis - Justice</span>
+              <span class="text-gray-400 text-[8px]">Electronic</span>
+            </div>
+            <div class="flex justify-between border-b border-zinc-800 pb-1">
+              <span>▶ Chillin' - Modjo</span>
+              <span class="text-gray-400 text-[8px]">House</span>
+            </div>
+            <div class="flex justify-between">
+              <span>▶ Daft Punk - One More Time</span>
+              <span class="text-gray-400 text-[8px]">French Touch</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="retro-outset p-2 text-center text-[10px] font-mono text-gray-700">
+      Anor Teran Mendonca © 2009–2026 | NeoCities Personal Space | St. Mary's Dubai Alumni
+    </footer>
+
+  </div>
+
+  <!-- SCRIPT FOR VISITOR COUNTER & CBOX LOGIC -->
+  <script>
+    /* -------------------------------------------------------------------------- */
+    /* 1. VISITOR COUNTER LOGIC                                                   */
+    /* -------------------------------------------------------------------------- */
+    // This script automatically tracks visitor hits and increments every time the page is loaded.
+    // It saves the visit count in the user's browser localStorage.
+    window.addEventListener('DOMContentLoaded', () => {
+      let currentVisits = parseInt(localStorage.getItem('anor_site_visits') || '8801', 10);
+      currentVisits += 1;
+      localStorage.setItem('anor_site_visits', currentVisits.toString());
+
+      // Format count to 6 digits with leading zeros (e.g. 008802)
+      const formattedCount = String(currentVisits).padStart(6, '0');
+      const counterBox = document.getElementById('visitor-count-box');
+      if (counterBox) {
+        counterBox.textContent = formattedCount;
+      }
+
+      // Initialize Cbox shouting stream
+      loadCboxMessages();
+    });
+
+    /* 
+      HOW TO USE A REAL SERVER-SIDE VISITOR COUNTER ON NEOCITIES:
+      If you want global visit counts across all different visitors online:
+      You can use a free counter widget from hitwebcounter.com or goatcounter.com:
+      <img src="https://hitwebcounter.com/counter/counter.php?page=YOUR_PAGE_ID&style=0005&nbdigits=6" title="Free Counter" Alt="web counter" border="0" />
+    */
+
+    /* -------------------------------------------------------------------------- */
+    /* 2. CBOX INTERACTIVE MESSAGING LOGIC                                        */
+    /* -------------------------------------------------------------------------- */
+    const DEFAULT_CBOX_MESSAGES = [
+      { name: "Anor", msg: "Welcome to my website! Feel free to leave a shoutout below!" }
+    ];
+
+    function loadCboxMessages() {
+      const stream = document.getElementById('cbox-stream');
+      const saved = localStorage.getItem('anor_cbox_messages');
+      let messages = saved ? JSON.parse(saved) : DEFAULT_CBOX_MESSAGES;
+
+      stream.innerHTML = '';
+      messages.forEach(item => {
+        const div = document.createElement('div');
+        div.className = "border-b border-gray-100 pb-1";
+        div.innerHTML = `<strong class="text-blue-900">${sanitize(item.name)}:</strong> ${sanitize(item.msg)}`;
+        stream.appendChild(div);
+      });
+      stream.scrollTop = stream.scrollHeight;
+    }
+
+    function addCboxEntry() {
+      const userEl = document.getElementById('cbox-user');
+      const textEl = document.getElementById('cbox-text');
+
+      const user = userEl.value.trim() || 'Guest';
+      const text = textEl.value.trim();
+
+      if (!text) return;
+
+      const saved = localStorage.getItem('anor_cbox_messages');
+      let messages = saved ? JSON.parse(saved) : DEFAULT_CBOX_MESSAGES;
+
+      messages.push({ name: user, msg: text });
+      
+      // Keep up to 30 recent shouts
+      if (messages.length > 30) messages.shift();
+
+      localStorage.setItem('anor_cbox_messages', JSON.stringify(messages));
+      
+      textEl.value = '';
+      loadCboxMessages();
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* 3. NAVIGATION TAB SWITCHER LOGIC                                          */
+    /* -------------------------------------------------------------------------- */
+    function switchTab(tabName) {
+      const panels = document.querySelectorAll('.tab-panel');
+      panels.forEach(panel => panel.classList.add('hidden'));
+
+      const activePanel = document.getElementById('panel-' + tabName);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+      }
+    }
+
+    function sanitize(str) {
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+  </script>
+</body>
+</html>
